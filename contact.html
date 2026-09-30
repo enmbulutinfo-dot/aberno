@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloqa — Aberno</title>
+  <meta name="description" content="Aberno bilan bog'laning: hamkorlik, ulgurji xarid va eksport bo'yicha so'rovlar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
+      <nav class="nav" aria-label="Asosiy menyu">
+        <a href="index.html" class="nav__link">Bosh sahifa</a>
+        <a href="about.html" class="nav__link">Kompaniya</a>
+        <a href="bulut.html" class="nav__link">Bulut</a>
+        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <a href="export.html" class="nav__link">Eksport</a>
+        <a href="contact.html" class="btn btn--primary">Bog'lanish</a>
+      </nav>
+      <button class="burger" aria-label="Menyuni ochish" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / Aloqa</div>
+        <h1>Biz bilan bog'laning</h1>
+        <p>Hamkorlik, ulgurji xarid yoki eksport bo'yicha savollaringiz bo'lsa — so'rov qoldiring.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <div class="contact-item">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+            <div><h4>Telefon</h4><p><a href="tel:+998000000000">+998 (00) 000-00-00</a></p></div>
+          </div>
+          <div class="contact-item">
+            <div class="card__icon card__icon--butter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg></div>
+            <div><h4>Email</h4><p><a href="mailto:info@aberno.uz">info@aberno.uz</a></p></div>
+          </div>
+          <div class="contact-item">
+            <div class="card__icon card__icon--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h4>Manzil</h4><p>O'zbekiston</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><h4>Ish vaqti</h4><p>Dushanba – Shanba, 09:00 – 18:00</p></div>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>So'rov qoldirish</h3>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Ismingiz *</label>
+              <input id="name" name="name" type="text" required>
+              <div class="field__error">Ismingizni kiriting</div>
+            </div>
+            <div class="field">
+              <label for="phone">Telefon *</label>
+              <input id="phone" name="phone" type="tel" placeholder="+998" required>
+              <div class="field__error">To'g'ri telefon raqam kiriting</div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="company">Kompaniya</label>
+              <input id="company" name="company" type="text">
+            </div>
+            <div class="field">
+              <label for="country">Davlat</label>
+              <select id="country" name="country">
+                <option>O'zbekiston</option>
+                <option>Qozog'iston</option>
+                <option>Qirg'iziston</option>
+                <option>Tojikiston</option>
+                <option>Turkmaniston</option>
+                <option>Boshqa</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="topic">Mavzu *</label>
+            <select id="topic" name="topic" required>
+              <option value="">Tanlang</option>
+              <option>BULUT — ulgurji xarid</option>
+              <option>MARGARITTO / SMAYLO — ulgurji xarid</option>
+              <option>Eksport / distribyutorlik</option>
+              <option>Ish o'rinlari</option>
+              <option>Boshqa</option>
+            </select>
+            <div class="field__error">Mavzuni tanlang</div>
+          </div>
+          <div class="field">
+            <label for="message">Xabar</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Yuborish</button>
+          <div class="form__success">Rahmat! So'rovingiz qabul qilindi, tez orada siz bilan bog'lanamiz.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
+          <p>2021-yildan beri sanitar-gigiena mahsulotlari va margarin ishlab chiqaramiz.</p>
+        </div>
+        <div>
+          <h4>Kompaniya</h4>
+          <ul>
+            <li><a href="about.html">Biz haqimizda</a></li>
+            <li><a href="export.html">Eksport</a></li>
+            <li><a href="contact.html">Aloqa</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Brendlar</h4>
+          <ul>
+            <li><a href="bulut.html">BULUT</a></li>
+            <li><a href="margarin.html">MARGARITTO</a></li>
+            <li><a href="margarin.html">SMAYLO</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Aloqa</h4>
+          <ul>
+            <li><a href="tel:+998000000000">+998 (00) 000-00-00</a></li>
+            <li><a href="mailto:info@aberno.uz">info@aberno.uz</a></li>
+            <li>O'zbekiston</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Aberno. Barcha huquqlar himoyalangan.</span>
+        <span>aberno.uz</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
