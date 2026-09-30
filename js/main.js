@@ -1,5 +1,26 @@
 // Aberno — umumiy skriptlar
 document.addEventListener("DOMContentLoaded", () => {
+  // Tema almashtirgich (yorug' / qorong'u)
+  const root = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = () => root.dataset.theme || (darkQuery.matches ? "dark" : "light");
+  const themeBtn = document.querySelector(".theme-toggle");
+  const syncThemeLabel = () => {
+    if (!themeBtn) return;
+    const label = currentTheme() === "dark" ? "Yorug' rejimga o'tish" : "Qorong'u rejimga o'tish";
+    themeBtn.setAttribute("aria-label", label);
+    themeBtn.title = label;
+  };
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      const next = currentTheme() === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try { localStorage.setItem("theme", next); } catch (e) {}
+      syncThemeLabel();
+    });
+  }
+  syncThemeLabel();
+
   // Mobil menyu
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav");
