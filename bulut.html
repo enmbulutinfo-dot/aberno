@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BULUT — sanitar-gigiena mahsulotlari | Aberno</title>
-  <meta name="description" content="BULUT: hojatxona qog'ozi, qog'oz sochiqlar, salfetkalar va rulonlar. Aberno ishlab chiqarishi.">
+  <meta name="description" content="BULUT mahsulotlari katalogi: qog'oz va nam salfetkalar, qutidagi salfetkalar, qog'oz sochiqlar, hojatxona qog'ozi va HoReCa dispenserlari.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -19,11 +19,19 @@
       <nav class="nav" aria-label="Asosiy menyu">
         <a href="index.html" class="nav__link">Bosh sahifa</a>
         <a href="about.html" class="nav__link">Kompaniya</a>
-        <a href="bulut.html" class="nav__link">Bulut</a>
+        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
         <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
         <a href="export.html" class="nav__link">Eksport</a>
         <a href="contact.html" class="btn btn--primary">Bog'lanish</a>
       </nav>
+      <details class="lang">
+        <summary aria-label="Til: O'zbekcha">UZ</summary>
+        <div class="lang__menu">
+          <a href="bulut.html" lang="uz" hreflang="uz" aria-current="true">O'zbekcha</a>
+          <a href="ru/bulut.html" lang="ru" hreflang="ru">Русский</a>
+          <a href="en/bulut.html" lang="en" hreflang="en">English</a>
+        </div>
+      </details>
       <button class="theme-toggle" type="button" aria-label="Qorong'u rejimga o'tish">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
@@ -36,29 +44,544 @@
     <section class="page-hero page-hero--bulut">
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / BULUT</div>
-        <h1>BULUT</h1>
+        <h1><img class="emblem emblem--hero emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></h1>
         <p>Bulutdek yumshoq. Uy, ofis va HoReCa uchun sanitar-gigiena mahsulotlari — O'zbekistonda ishlab chiqarilgan va O'rta Osiyo bozorlariga eksport qilinmoqda.</p>
-        <div class="hero__actions" style="position:relative;z-index:1;margin-top:24px">
-          <a href="#katalog" class="btn btn--light">Mahsulot katalogi</a>
+        <div class="hero__actions page-hero__actions">
+          <a href="#mahsulotlar" class="btn btn--light">Mahsulotlar</a>
+          <a href="#katalog" class="btn btn--ghost-light">Katalog (PDF)</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="katalog">
+    <section class="section" id="mahsulotlar">
+      <div class="container">
+        <div class="section__head">
+          <span class="eyebrow">Mahsulotlar</span>
+          <h2>To'liq assortiment</h2>
+          <p class="lead">Katalogdagi barcha mahsulotlar: miqdori, o'lchami, tarkibi va qatlamlar soni. Bir nechta dizayni bor mahsulotlarda kichik rasmlarni bosib, dizaynlarni almashtiring.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Kategoriyalar">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Hammasi<span class="filter__count">39</span></button>
+          <button type="button" class="filter" data-filter="napkins" aria-pressed="false">Qog'oz salfetkalar<span class="filter__count">8</span></button>
+          <button type="button" class="filter" data-filter="dispenser" aria-pressed="false">Dispenser uchun salfetkalar<span class="filter__count">5</span></button>
+          <button type="button" class="filter" data-filter="towels" aria-pressed="false">Qog'oz sochiqlar<span class="filter__count">2</span></button>
+          <button type="button" class="filter" data-filter="wet" aria-pressed="false">Nam salfetkalar<span class="filter__count">4</span></button>
+          <button type="button" class="filter" data-filter="box" aria-pressed="false">Qutidagi salfetkalar<span class="filter__count">3</span></button>
+          <button type="button" class="filter" data-filter="toilet" aria-pressed="false">Hojatxona qog'ozi<span class="filter__count">9</span></button>
+          <button type="button" class="filter" data-filter="dispensers" aria-pressed="false">Dispenserlar<span class="filter__count">4</span></button>
+          <button type="button" class="filter" data-filter="pandoozy" aria-pressed="false">PanDoozy<span class="filter__count">4</span></button>
+        </div>
+
+        <div class="cat-group" data-cat="napkins" id="cat-napkins">
+          <div class="cat-group__head"><h3>Qog'oz salfetkalar</h3><span>8 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-23-100.jpg" alt="Qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>100 dona</span></li>
+                  <li><span>O'lchami</span><span>23×23 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-23-50.jpg" alt="Qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>50 dona</span></li>
+                  <li><span>O'lchami</span><span>23×23 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-27-100.jpg" alt="Qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>100 dona</span></li>
+                  <li><span>O'lchami</span><span>27×27 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-27-50.jpg" alt="Qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>50 dona</span></li>
+                  <li><span>O'lchami</span><span>27×27 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-200.jpg" alt="Qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>200 dona</span></li>
+                  <li><span>O'lchami</span><span>23×21 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-longer-40.jpg" alt="Qog'oz salfetkalar LONGER" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz salfetkalar LONGER</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>40 dona</span></li>
+                  <li><span>O'lchami</span><span>32×33 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-dekor-50.jpg" alt="Dekorativ qog'oz salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dekorativ qog'oz salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>50 dona</span></li>
+                  <li><span>O'lchami</span><span>27×27 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/salfetka-rangli-20.jpg" alt="Dekorativ salfetkalar: oq, qizil, yashil, sariq" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dekorativ salfetkalar: oq, qizil, yashil, sariq</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>20 dona</span></li>
+                  <li><span>O'lchami</span><span>32×33 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="dispenser" id="cat-dispenser">
+          <div class="cat-group__head"><h3>Dispenser uchun salfetkalar</h3><span>5 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-salfetka-z-200.jpg" alt="Dispenser uchun salfetkalar Z" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser uchun salfetkalar Z</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>200 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-salfetka-v-150.jpg" alt="Dispenser uchun salfetkalar V" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser uchun salfetkalar V</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>150 dona</span></li>
+                  <li><span>O'lchami</span><span>19,5×10,5 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-salfetka-180.jpg" alt="Dispenser uchun salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser uchun salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>180 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-salfetka-100.jpg" alt="Dispenser uchun salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser uchun salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>100 dona</span></li>
+                  <li><span>O'lchami</span><span>21×21 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-salfetka-75.jpg" alt="Dispenser uchun salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser uchun salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>75 dona</span></li>
+                  <li><span>O'lchami</span><span>17×21 sm</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="towels" id="cat-towels">
+          <div class="cat-group__head"><h3>Qog'oz sochiqlar</h3><span>2 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/sochiq-big-kok.jpg" alt="BIG qog'oz sochiqlar" loading="lazy"></div>
+              <div class="product__body">
+                <span class="product__tag">Super shimuvchan</span>
+                <h4>BIG qog'oz sochiqlar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>1 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>3</span></li>
+                </ul>
+                <div class="product__variants" role="group" aria-label="Dizaynlar">
+                  <button type="button" class="variant is-active" data-src="images/products/sochiq-big-kok.jpg" aria-label="Dizayn 1" aria-pressed="true"><img src="images/products/sochiq-big-kok.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/sochiq-big-toq-kok.jpg" aria-label="Dizayn 2" aria-pressed="false"><img src="images/products/sochiq-big-toq-kok.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/sochiq-big-pushti.jpg" aria-label="Dizayn 3" aria-pressed="false"><img src="images/products/sochiq-big-pushti.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/sochiq-big-yashil.jpg" aria-label="Dizayn 4" aria-pressed="false"><img src="images/products/sochiq-big-yashil.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/sochiq-big-binafsha.jpg" aria-label="Dizayn 5" aria-pressed="false"><img src="images/products/sochiq-big-binafsha.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/sochiq-big-toq-sariq.jpg" aria-label="Dizayn 6" aria-pressed="false"><img src="images/products/sochiq-big-toq-sariq.jpg" alt="" loading="lazy"></button>
+                </div>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/sochiq-2-rulon.jpg" alt="Qog'oz sochiqlar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Qog'oz sochiqlar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>2 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="wet" id="cat-wet">
+          <div class="cat-group__head"><h3>Nam salfetkalar</h3><span>4 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/nam-salfetka-premium.jpg" alt="Premium nam salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Premium nam salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>120 dona</span></li>
+                  <li><span>Tarkibi</span><span>Viskoza 20%, poliefir 80%</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/nam-salfetka.jpg" alt="Nam salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Nam salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>120 dona</span></li>
+                  <li><span>Tarkibi</span><span>Viskoza 20%, poliefir 80%</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/nam-salfetka-bolalar.jpg" alt="Bolalar uchun nam salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Bolalar uchun nam salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>120 dona</span></li>
+                  <li><span>Tarkibi</span><span>Viskoza 20%, poliefir 80%</span></li>
+                  <li><span>Qatlami</span><span>1</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/zal-toplami.jpg" alt="Zal uchun to'plam" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Zal uchun to'plam</h4>
+                <p class="product__desc">Quruq salfetka, nam salfetka va tish kovlagich</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="box" id="cat-box">
+          <div class="cat-group__head"><h3>Qutidagi salfetkalar</h3><span>3 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/quti-premium-1.jpg" alt="Premium qutidagi salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Premium qutidagi salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>100 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+                <div class="product__variants" role="group" aria-label="Dizaynlar">
+                  <button type="button" class="variant is-active" data-src="images/products/quti-premium-1.jpg" aria-label="Dizayn 1" aria-pressed="true"><img src="images/products/quti-premium-1.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-premium-2.jpg" aria-label="Dizayn 2" aria-pressed="false"><img src="images/products/quti-premium-2.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-premium-3.jpg" aria-label="Dizayn 3" aria-pressed="false"><img src="images/products/quti-premium-3.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-premium-4.jpg" aria-label="Dizayn 4" aria-pressed="false"><img src="images/products/quti-premium-4.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-premium-5.jpg" aria-label="Dizayn 5" aria-pressed="false"><img src="images/products/quti-premium-5.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-premium-6.jpg" aria-label="Dizayn 6" aria-pressed="false"><img src="images/products/quti-premium-6.jpg" alt="" loading="lazy"></button>
+                </div>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/quti-avto-1.jpg" alt="Avtomobil uchun qutidagi salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Avtomobil uchun qutidagi salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>60 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+                <div class="product__variants" role="group" aria-label="Dizaynlar">
+                  <button type="button" class="variant is-active" data-src="images/products/quti-avto-1.jpg" aria-label="Dizayn 1" aria-pressed="true"><img src="images/products/quti-avto-1.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-2.jpg" aria-label="Dizayn 2" aria-pressed="false"><img src="images/products/quti-avto-2.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-3.jpg" aria-label="Dizayn 3" aria-pressed="false"><img src="images/products/quti-avto-3.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-4.jpg" aria-label="Dizayn 4" aria-pressed="false"><img src="images/products/quti-avto-4.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-5.jpg" aria-label="Dizayn 5" aria-pressed="false"><img src="images/products/quti-avto-5.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-6.jpg" aria-label="Dizayn 6" aria-pressed="false"><img src="images/products/quti-avto-6.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-avto-7.jpg" aria-label="Dizayn 7" aria-pressed="false"><img src="images/products/quti-avto-7.jpg" alt="" loading="lazy"></button>
+                </div>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/quti-universal-1.jpg" alt="Universal qutidagi salfetkalar" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Universal qutidagi salfetkalar</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>100 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+                <div class="product__variants" role="group" aria-label="Dizaynlar">
+                  <button type="button" class="variant is-active" data-src="images/products/quti-universal-1.jpg" aria-label="Dizayn 1" aria-pressed="true"><img src="images/products/quti-universal-1.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-universal-2.jpg" aria-label="Dizayn 2" aria-pressed="false"><img src="images/products/quti-universal-2.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-universal-3.jpg" aria-label="Dizayn 3" aria-pressed="false"><img src="images/products/quti-universal-3.jpg" alt="" loading="lazy"></button>
+                  <button type="button" class="variant" data-src="images/products/quti-universal-4.jpg" aria-label="Dizayn 4" aria-pressed="false"><img src="images/products/quti-universal-4.jpg" alt="" loading="lazy"></button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="toilet" id="cat-toilet">
+          <div class="cat-group__head"><h3>Hojatxona qog'ozi</h3><span>9 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-vtulkali-6.jpg" alt="Hojatxona qog'ozi, vtulkali" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi, vtulkali</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>6 rulon</span></li>
+                  <li><span>Tarkibi</span><span>Makulatura</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-vtulkasiz-6.jpg" alt="Hojatxona qog'ozi, vtulkasiz" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi, vtulkasiz</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>6 rulon</span></li>
+                  <li><span>Tarkibi</span><span>Makulatura</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-6.jpg" alt="Hojatxona qog'ozi" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>6 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-oq-6.jpg" alt="Hojatxona qog'ozi" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>6 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-aroma-sariq-8.jpg" alt="Hojatxona qog'ozi Aroma, sariq" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi Aroma, sariq</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>8 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-aroma-8.jpg" alt="Hojatxona qog'ozi Aroma" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi Aroma</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>8 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-8.jpg" alt="Hojatxona qog'ozi" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>8 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-60.jpg" alt="Hojatxona qog'ozi" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Hojatxona qog'ozi</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>60 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/hojatxona-mega-rolls.jpg" alt="Mega Rolls — dispenser uchun hojatxona qog'ozi" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Mega Rolls — dispenser uchun hojatxona qog'ozi</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>1 rulon</span></li>
+                  <li><span>Tarkibi</span><span>Makulatura</span></li>
+                  <li><span>Qatlami</span><span>2</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="dispensers" id="cat-dispensers">
+          <div class="cat-group__head"><h3>Dispenserlar</h3><span>4 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-horeca-v.jpg" alt="Dispenser HORECA V" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser HORECA V</h4>
+                <p class="product__desc">V-taxlangan salfetkalar uchun</p>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-horeca-z.jpg" alt="Dispenser HORECA Z" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser HORECA Z</h4>
+                <p class="product__desc">Z-taxlangan salfetkalar uchun</p>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-horeca-l.jpg" alt="Dispenser HORECA L" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Dispenser HORECA L</h4>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/dispenser-mega-rolls.jpg" alt="Premium dispenser MEGA Rolls uchun" loading="lazy"></div>
+              <div class="product__body">
+                <h4>Premium dispenser MEGA Rolls uchun</h4>
+                <p class="product__desc">Mega Rolls hojatxona qog'ozi uchun</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="cat-group" data-cat="pandoozy" id="cat-pandoozy">
+          <div class="cat-group__head"><h3>PanDoozy</h3><span>4 ta mahsulot</span></div>
+          <div class="product-grid">
+            <article class="product">
+              <div class="product__img"><img src="images/products/pandoozy-vtulkasiz-10.jpg" alt="PanDoozy hojatxona qog'ozi, vtulkasiz" loading="lazy"></div>
+              <div class="product__body">
+                <h4>PanDoozy hojatxona qog'ozi, vtulkasiz</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>10 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>6</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/pandoozy-vtulkali-10.jpg" alt="PanDoozy hojatxona qog'ozi, vtulkali" loading="lazy"></div>
+              <div class="product__body">
+                <h4>PanDoozy hojatxona qog'ozi, vtulkali</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>10 rulon</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>6</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/pandoozy-salfetka-345.jpg" alt="PanDoozy salfetkalari, qulay qadoqda" loading="lazy"></div>
+              <div class="product__body">
+                <h4>PanDoozy salfetkalari, qulay qadoqda</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>345 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>4</span></li>
+                </ul>
+              </div>
+            </article>
+            <article class="product">
+              <div class="product__img"><img src="images/products/pandoozy-salfetka-70.jpg" alt="PanDoozy salfetkalari, qulay qadoqda" loading="lazy"></div>
+              <div class="product__body">
+                <h4>PanDoozy salfetkalari, qulay qadoqda</h4>
+                <ul class="product__list">
+                  <li><span>Miqdori</span><span>70 dona</span></li>
+                  <li><span>Tarkibi</span><span>100% sellyuloza</span></li>
+                  <li><span>Qatlami</span><span>6</span></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="katalog">
       <div class="container split">
         <a href="files/bulut-katalog.pdf" target="_blank" rel="noopener" class="catalog__cover reveal" aria-label="BULUT katalogini ochish">
           <img src="images/bulut-katalog-muqova.jpg" alt="BULUT mahsulot katalogi muqovasi" width="1400" height="990" loading="lazy">
         </a>
         <div class="reveal">
           <span class="eyebrow">Katalog</span>
-          <h2>BULUT mahsulot katalogi</h2>
-          <p class="lead">To'liq assortiment bir faylda: har bir mahsulot uchun miqdor, o'lcham, tarkib va qatlamlar soni.</p>
-          <ul class="checklist">
-            <li>Qog'oz salfetkalar va dispenser uchun salfetkalar</li>
-            <li>Qog'oz sochiqlar va nam salfetkalar</li>
-            <li>Qutidagi salfetkalar, jumladan avtomobil uchun</li>
-            <li>Hojatxona qog'ozi va HoReCa dispenserlari</li>
-          </ul>
+          <h2>Katalogni yuklab oling</h2>
+          <p class="lead">Barcha mahsulotlar bitta PDF faylda — hamkorlar va xaridorlar bilan ulashish uchun qulay.</p>
           <div class="catalog__actions">
             <a href="files/bulut-katalog.pdf" target="_blank" rel="noopener" class="btn btn--primary">Katalogni ochish</a>
             <a href="files/bulut-katalog.pdf" download="Bulut-katalog.pdf" class="btn btn--outline">Yuklab olish</a>
@@ -69,89 +592,24 @@
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Mahsulotlar</span>
-          <h2>BULUT assortimenti</h2>
-          <p class="lead">Kundalik gigiena uchun kerakli hamma narsa — bitta brend ostida.</p>
-        </div>
-        <div class="grid-4">
-          <article class="product reveal">
-            <div class="product__img" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="26" rx="30" ry="10" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M20 26v48c0 5.5 13.4 10 30 10s30-4.5 30-10V26" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><ellipse cx="50" cy="26" rx="9" ry="3" fill="#cfe4f8"/></svg>
-            </div>
-            <div class="product__body">
-              <h3>Hojatxona qog'ozi</h3>
-              <p>Yumshoq, mustahkam va yaxshi eriydigan qog'oz.</p>
-              <ul class="product__list">
-                <li><span>Qo'llanilishi</span><span>Uy, ofis</span></li>
-              </ul>
-            </div>
-          </article>
-          <article class="product reveal">
-            <div class="product__img" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><ellipse cx="38" cy="22" rx="20" ry="7" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M18 22v56c0 4 9 7 20 7s20-3 20-7V22" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M58 30h26v52H58" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M58 56h26" stroke="#cfe4f8" stroke-width="3" stroke-dasharray="4 3"/></svg>
-            </div>
-            <div class="product__body">
-              <h3>Qog'oz sochiqlar</h3>
-              <p>Namlikni tez shimuvchi, oshxona va qo'l uchun sochiqlar.</p>
-              <ul class="product__list">
-                <li><span>Qo'llanilishi</span><span>Oshxona, HoReCa</span></li>
-              </ul>
-            </div>
-          </article>
-          <article class="product reveal">
-            <div class="product__img" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><rect x="18" y="38" width="64" height="40" rx="6" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M40 38c0-12 20-12 20 0" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M44 30l6-10 6 10" fill="#fff" stroke="#2f8fe0" stroke-width="3" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="product__body">
-              <h3>Salfetkalar</h3>
-              <p>Dasturxon va kundalik foydalanish uchun salfetkalar.</p>
-              <ul class="product__list">
-                <li><span>Qo'llanilishi</span><span>Uy, kafe, restoran</span></li>
-              </ul>
-            </div>
-          </article>
-          <article class="product reveal">
-            <div class="product__img" aria-hidden="true">
-              <svg viewBox="0 0 100 100"><ellipse cx="50" cy="24" rx="34" ry="11" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><path d="M16 24v50c0 6 15.2 11 34 11s34-5 34-11V24" fill="#fff" stroke="#2f8fe0" stroke-width="3"/><ellipse cx="50" cy="24" rx="12" ry="4" fill="#cfe4f8"/><path d="M16 44c10 4 58 4 68 0M16 60c10 4 58 4 68 0" stroke="#cfe4f8" stroke-width="2" fill="none"/></svg>
-            </div>
-            <div class="product__body">
-              <h3>Rulonlar</h3>
-              <p>Katta hajmli rulonlar — jamoat joylari va biznes uchun.</p>
-              <ul class="product__list">
-                <li><span>Qo'llanilishi</span><span>Ofis, jamoat joylari</span></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft">
       <div class="container split">
         <div class="split__visual reveal" aria-hidden="true">
-          <svg viewBox="0 0 200 140" fill="#2f8fe0">
-            <circle cx="70" cy="80" r="34" opacity=".25"/>
-            <circle cx="110" cy="64" r="44" opacity=".35"/>
-            <circle cx="145" cy="86" r="28" opacity=".25"/>
-            <text x="108" y="76" text-anchor="middle" font-size="26" font-weight="800" fill="#0f2a4a">BULUT</text>
-          </svg>
+          <img class="emblem emblem--showcase emblem--auto" src="images/bulut-logo.png" alt="" width="848" height="615">
         </div>
         <div class="reveal">
           <span class="eyebrow">Nega BULUT</span>
           <h2>Har bir varaqda qulaylik</h2>
           <ul class="checklist">
-            <li>Teriga yoqimli, yumshoq tekstura</li>
-            <li>Kundalik foydalanish uchun mustahkamlik</li>
-            <li>Uy, ofis va HoReCa uchun turli formatlar</li>
+            <li>Ko'pchilik mahsulotlar 100% sellyulozadan tayyorlanadi</li>
+            <li>Uy, ofis, avtomobil va HoReCa uchun turli formatlar</li>
+            <li>Salfetka va qog'oz uchun mos dispenserlar</li>
             <li>O'rta Osiyo bozorlariga eksport qilinadi</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="padding-top:0">
       <div class="container">
         <div class="cta reveal">
           <div>
@@ -185,10 +643,9 @@
         <div>
           <h4>Brendlar</h4>
           <ul>
-            <li><a href="bulut.html">BULUT</a></li>
+            <li><a href="bulut.html"><img class="emblem emblem--footer emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a></li>
             <li><a href="margarin.html">MARGARITTO</a></li>
             <li><a href="margarin.html">SMAYLO</a></li>
-            <li><a href="files/bulut-katalog.pdf" target="_blank" rel="noopener">BULUT katalogi (PDF)</a></li>
           </ul>
         </div>
         <div>

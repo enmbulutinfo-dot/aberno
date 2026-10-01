@@ -5,9 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   const currentTheme = () => root.dataset.theme || (darkQuery.matches ? "dark" : "light");
   const themeBtn = document.querySelector(".theme-toggle");
+  const themeLabels = {
+    uz: { toLight: "Yorug' rejimga o'tish", toDark: "Qorong'u rejimga o'tish" },
+    ru: { toLight: "Включить светлую тему", toDark: "Включить тёмную тему" },
+    en: { toLight: "Switch to light mode", toDark: "Switch to dark mode" },
+  };
+  const labels = themeLabels[root.lang] || themeLabels.uz;
   const syncThemeLabel = () => {
     if (!themeBtn) return;
-    const label = currentTheme() === "dark" ? "Yorug' rejimga o'tish" : "Qorong'u rejimga o'tish";
+    const label = currentTheme() === "dark" ? labels.toLight : labels.toDark;
     themeBtn.setAttribute("aria-label", label);
     themeBtn.title = label;
   };
@@ -135,6 +141,45 @@ document.addEventListener("DOMContentLoaded", () => {
       input.addEventListener("input", () => input.closest(".field").classList.remove("has-error"))
     );
   }
+
+  // Til menyusi: tashqariga bosilganda yopiladi
+  const langMenu = document.querySelector(".lang");
+  if (langMenu) {
+    document.addEventListener("click", (e) => {
+      if (langMenu.open && !langMenu.contains(e.target)) langMenu.open = false;
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") langMenu.open = false;
+    });
+  }
+
+  // Mahsulot kategoriyalari filtri
+  const filters = document.querySelectorAll(".filter");
+  const groups = document.querySelectorAll(".cat-group");
+  filters.forEach((btn) =>
+    btn.addEventListener("click", () => {
+      const cat = btn.dataset.filter;
+      filters.forEach((b) => {
+        b.classList.toggle("is-active", b === btn);
+        b.setAttribute("aria-pressed", b === btn);
+      });
+      groups.forEach((g) => (g.hidden = cat !== "all" && g.dataset.cat !== cat));
+    })
+  );
+
+  // Mahsulot dizayn variantlari
+  document.querySelectorAll(".product__variants").forEach((wrap) => {
+    const main = wrap.closest(".product").querySelector(".product__img img");
+    wrap.querySelectorAll(".variant").forEach((v) =>
+      v.addEventListener("click", () => {
+        main.src = v.dataset.src;
+        wrap.querySelectorAll(".variant").forEach((x) => {
+          x.classList.toggle("is-active", x === v);
+          x.setAttribute("aria-pressed", x === v);
+        });
+      })
+    );
+  });
 
   // Footer yili
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
