@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aberno — gigiena va yog' mahsulotlari ishlab chiqaruvchisi</title>
-  <meta name="description" content="Aberno — 2021-yildan beri BULUT sanitar-gigiena mahsulotlari hamda MARGARITTO va SMAYLO margarin va spredlarini ishlab chiqaradi.">
+  <title>Aberno Group — gigiena mahsulotlari, margarin va spredlar ishlab chiqaruvchisi</title>
+  <meta name="description" content="Aberno Group 2021-yildan beri BULUT gigiena mahsulotlari va qog'oz xomashyosi, MARGARITTO va SMAYLO margarin va spredlarini ishlab chiqaradi.">
+  <meta name="theme-color" content="#0b1a2e">
+  <link rel="icon" type="image/png" href="images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,12 +17,12 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
+      <a href="index.html" class="logo" aria-label="Aberno Group — Bosh sahifa"><img class="logo__mark" src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Asosiy menyu">
-        <a href="index.html" class="nav__link">Bosh sahifa</a>
         <a href="about.html" class="nav__link">Kompaniya</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
+        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
         <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <a href="xomashyo.html" class="nav__link">Xomashyo</a>
         <a href="export.html" class="nav__link">Eksport</a>
         <a href="contact.html" class="btn btn--primary">Bog'lanish</a>
       </nav>
@@ -41,181 +43,202 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero">
+    <section class="hero dark-zone">
+      <div class="aurora" aria-hidden="true"><span></span></div>
+      <div class="lines" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="reveal">
-          <span class="eyebrow">2021-yildan beri</span>
-          <h1>Har kuni kerak bo'ladigan <span>sifatli mahsulotlar</span></h1>
-          <p class="lead">Aberno — BULUT sanitar-gigiena mahsulotlari hamda MARGARITTO va SMAYLO margarin va spredlarini ishlab chiqaruvchi O'zbekiston kompaniyasi.</p>
+          <span class="eyebrow">Aberno Group · 2021-yildan beri</span>
+          <h1>Har bir xonadon uchun <span class="gold-text">sifat va ishonch</span></h1>
+          <p class="lead">Biz BULUT gigiena mahsulotlari va qog'oz xomashyosini, MARGARITTO va SMAYLO margarin va spredlarini ishlab chiqaramiz. 150 dan ortiq mutaxassisimiz O'zbekiston va O'rta Osiyo bozorlari uchun ishlaydi.</p>
           <div class="hero__actions">
             <a href="#brendlar" class="btn btn--primary">Brendlarimiz</a>
-            <a href="contact.html" class="btn btn--outline">Hamkor bo'lish</a>
+            <a href="contact.html" class="btn btn--ghost-light">Hamkor bo'lish</a>
           </div>
         </div>
-
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="hero__card hero__card--bulut">
-            <img class="hero__photo" src="images/products/salfetka-27-100.jpg" alt="" width="602" height="479">
-            <img class="emblem emblem--card emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615">
-            <p>Sanitar-gigiena mahsulotlari</p>
-          </div>
-          <div class="hero__card hero__card--badge">
-            <span class="badge-num">150+</span>
-            <span>xodim<br>jamoamizda</span>
-          </div>
-          <div class="hero__card hero__card--marg">
-            <svg viewBox="0 0 200 120">
-              <rect width="200" height="120" rx="14" fill="#fff6dc"/>
-              <ellipse cx="100" cy="38" rx="52" ry="12" fill="#f4b400"/>
-              <path d="M50 42l8 50c1 7 19 12 42 12s41-5 42-12l8-50" fill="#fff" stroke="#f4b400" stroke-width="3"/>
-              <path d="M70 66c10-8 50-8 60 0" stroke="#f4b400" stroke-width="3" fill="none" stroke-linecap="round"/>
-            </svg>
-            <h4>MARGARITTO · SMAYLO</h4>
-            <p>Margarin va spredlar</p>
-          </div>
+        <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
+          <figure class="float-card float-card--a">
+            <img src="images/marg/marg-katalog-muqova.jpg" alt="" width="1056" height="1200">
+            <figcaption><img src="images/brand/margaritto-logo.png" alt="" width="1384" height="805"><span>Margarin va spredlar</span></figcaption>
+          </figure>
+          <figure class="float-card float-card--b">
+            <div class="float-card__media" style="height:100%"><img class="contain" src="images/products/quti-premium-6.jpg" alt=""></div>
+            <figcaption><img class="emblem--white" src="images/bulut-logo.png" alt="" width="848" height="615"><span>Gigiena mahsulotlari</span></figcaption>
+          </figure>
+          <div class="float-badge"><strong>1000 t</strong><span>margarin va spred<br>oylik quvvat</span></div>
         </div>
       </div>
+      <div class="scroll-hint" aria-hidden="true"></div>
     </section>
 
-    <!-- Statistika -->
-    <section class="section section--soft">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div><img class="emblem--white" src="images/bulut-logo.png" alt="" width="848" height="615"><span class="marquee__word">Gigiena</span><img src="images/brand/margaritto-logo.png" alt="" width="1384" height="805"><span class="marquee__word">Margarin</span><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="" width="1493" height="508"><span class="marquee__word">Spred</span><img src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="marquee__word">Xomashyo</span></div>
+        <div><img class="emblem--white" src="images/bulut-logo.png" alt="" width="848" height="615"><span class="marquee__word">Gigiena</span><img src="images/brand/margaritto-logo.png" alt="" width="1384" height="805"><span class="marquee__word">Margarin</span><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="" width="1493" height="508"><span class="marquee__word">Spred</span><img src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="marquee__word">Xomashyo</span></div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-bottom:40px">
       <div class="container">
-        <div class="stats">
-          <div class="stat reveal"><div class="stat__num" data-count="2021">2021</div><div class="stat__label">asos solingan yil</div></div>
-          <div class="stat reveal"><div class="stat__num" data-count="150" data-suffix="+">150+</div><div class="stat__label">xodim</div></div>
-          <div class="stat reveal"><div class="stat__num" data-count="35">35</div><div class="stat__label">BULUT katalogidagi mahsulot</div></div>
-          <div class="stat reveal"><div class="stat__num" data-count="2">2</div><div class="stat__label">ishlab chiqarish yo'nalishi</div></div>
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num" data-count="2021">2021</div><div class="stat__label">asos solingan yil</div></div>
+          <div class="stat"><div class="stat__num" data-count="150" data-suffix="+">150+</div><div class="stat__label">xodim</div></div>
+          <div class="stat"><div class="stat__num"><span data-count="1000">1000</span><small>t</small></div><div class="stat__label">margarin va spred — oylik quvvat</div></div>
+          <div class="stat"><div class="stat__num" data-count="50" data-suffix="+">50+</div><div class="stat__label">mahsulot turi</div></div>
         </div>
       </div>
     </section>
 
-    <!-- Brendlar -->
     <section class="section" id="brendlar">
       <div class="container">
         <div class="section__head reveal">
           <span class="eyebrow">Brendlarimiz</span>
-          <h2>Uy uchun gigiena va dasturxon uchun mazali mahsulotlar</h2>
-          <p class="lead">Ikki yo'nalish, bitta tamoyil — har bir oila ishonch bilan tanlaydigan mahsulot.</p>
+          <h2>Uch brend — bitta yuqori standart</h2>
+          <p class="lead">Uy va ofis gigienasidan tortib nonvoyxona va qandolatchilik sexlarigacha — har bir yo'nalishda o'z ishlab chiqarishimiz.</p>
         </div>
-        <div class="grid-2">
-          <article class="brand brand--bulut reveal">
-            <h3><img class="emblem emblem--brand emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></h3>
-            <p>Yumshoq va ishonchli sanitar-gigiena mahsulotlari: uy, ofis va HoReCa uchun.</p>
-            <div class="brand__tags">
-              <span class="tag">Qog'oz salfetkalar</span>
-              <span class="tag">Nam salfetkalar</span>
-              <span class="tag">Qog'oz sochiqlar</span>
-              <span class="tag">Hojatxona qog'ozi</span>
-              <span class="tag">Dispenserlar</span>
-            </div>
-            <a href="bulut.html" class="btn btn--light">Mahsulotlarni ko'rish →</a>
-            <svg class="brand__deco" viewBox="0 0 100 100" fill="#fff"><circle cx="35" cy="55" r="25"/><circle cx="60" cy="45" r="30"/><circle cx="80" cy="60" r="20"/></svg>
-          </article>
-          <article class="brand brand--marg reveal">
-            <h3>MARGARITTO &amp; SMAYLO</h3>
-            <p>Pishiriq, qandolatchilik va kundalik dasturxon uchun margarin va spredlar.</p>
-            <div class="brand__tags">
-              <span class="tag">Margarin</span>
-              <span class="tag">Spred</span>
-              <span class="tag">Qandolatchilik uchun</span>
-            </div>
-            <a href="margarin.html" class="btn btn--light">Mahsulotlarni ko'rish →</a>
-            <svg class="brand__deco" viewBox="0 0 100 100" fill="#fff"><rect x="15" y="30" width="70" height="50" rx="10"/><rect x="10" y="22" width="80" height="12" rx="6"/></svg>
-          </article>
+        <div class="brands-grid">
+          <a href="bulut.html" class="brand-card reveal">
+            <img class="brand-card__bg" src="images/bulut-brand.jpg" alt="" loading="lazy" style="object-position:50% 0%">
+            <img class="brand-card__logo emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615">
+            <div class="brand__tags"><span class="tag">Salfetkalar</span><span class="tag">Sochiqlar</span><span class="tag">Hojatxona qog'ozi</span><span class="tag">Dispenserlar</span></div>
+            <p>Uy, ofis va HoReCa uchun 35 dan ortiq gigiena mahsuloti.</p>
+            <span class="brand-card__link">BULUT katalogi</span>
+          </a>
+          <a href="margarin.html" class="brand-card reveal reveal-delay-1">
+            <img class="brand-card__bg" src="images/marg/margaritto-pastry-80.jpg" alt="" loading="lazy">
+            <img class="brand-card__logo" src="images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805">
+            <div class="brand__tags"><span class="tag">Qatlamli xamir</span><span class="tag">Kremlar</span><span class="tag">Universal</span><span class="tag">99% yog'</span></div>
+            <p>Uy bekalari va professional qandolatchilar uchun margarinlar.</p>
+            <span class="brand-card__link">Margaritto mahsulotlari</span>
+          </a>
+          <a href="margarin.html" class="brand-card reveal reveal-delay-2">
+            <img class="brand-card__bg" src="images/marg/smaylo-spread-82.jpg" alt="" loading="lazy">
+            <img class="brand-card__logo emblem--white" src="images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508">
+            <div class="brand__tags"><span class="tag">Spred 82,5%</span><span class="tag">Spred 72%</span><span class="tag">Nonushta</span></div>
+            <p>Nonushta va kundalik dasturxon uchun mazali spredlar.</p>
+            <span class="brand-card__link">Smaylo mahsulotlari</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Afzalliklar -->
     <section class="section section--soft">
+      <div class="container split">
+        <div class="split__photo reveal">
+          <img src="images/marg/zavod.jpg" alt="Aberno margarin ishlab chiqarish sexi" width="1200" height="884" loading="lazy">
+          <div class="photo-badge"><strong>2000 kg/soat</strong><span>liniya quvvati</span></div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <span class="eyebrow">Ishlab chiqarish</span>
+          <h2>Zamonaviy liniyalar, qat'iy nazorat</h2>
+          <p class="lead">Margarin va spredlar Toshkentdagi o'z zavodimizda ISO 22000 va HACCP talablari asosida ishlab chiqariladi.</p>
+          <div class="capacity">
+            <div><strong>1000 t</strong><span>oylik quvvat</span></div>
+            <div><strong>520 t</strong><span>amaldagi ishlab chiqarish</span></div>
+            <div><strong>30</strong><span>tagacha SKU</span></div>
+          </div>
+          <a href="about.html" class="btn btn--outline" style="margin-top:30px">Kompaniya haqida</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <img class="emblem emblem--section emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615">
+          <span class="eyebrow">Xomashyo</span>
+          <h2>Sanitar-gigiena asos qog'ozi — ishlab chiqaruvchidan</h2>
+          <p class="lead">100% sellyulozali asos qog'oz: zichligi 15–24 g/m², 1–3 qatlam, kengligi 2000 mm gacha. Salfetka, sochiq va hojatxona qog'ozi ishlab chiqaruvchilar uchun.</p>
+          <a href="xomashyo.html" class="btn btn--primary" style="margin-top:12px">Xomashyo haqida</a>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <svg class="roll-art" viewBox="0 0 500 500" aria-hidden="true">
+            <defs>
+              <radialGradient id="rp1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffffff"/><stop offset="72%" stop-color="#eef2f7"/><stop offset="100%" stop-color="#c7d1de"/></radialGradient>
+              <linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0cf92"/><stop offset="1" stop-color="#b97f36"/></linearGradient>
+            </defs>
+            <circle cx="250" cy="250" r="226" fill="url(#rp1)"/>
+            <g class="spin" fill="none" stroke="#c3cdda" stroke-width="1.2">
+              <circle cx="250" cy="250" r="210" stroke-dasharray="3 9"/><circle cx="250" cy="250" r="190"/><circle cx="250" cy="250" r="170" stroke-dasharray="40 14"/><circle cx="250" cy="250" r="150"/><circle cx="250" cy="250" r="130" stroke-dasharray="2 6"/><circle cx="250" cy="250" r="110"/><circle cx="250" cy="250" r="90" stroke-dasharray="24 10"/>
+            </g>
+            <circle cx="250" cy="250" r="66" fill="url(#rg1)"/>
+            <circle cx="250" cy="250" r="42" fill="#0b1a2e"/>
+            <circle cx="250" cy="250" r="226" fill="none" stroke="url(#rg1)" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Sifat kafolati</span>
+          <h2>Xalqaro standartlarga mos</h2>
+        </div>
+        <div class="certs">
+          <div class="cert reveal"><div class="cert__seal">ISO</div><h4>ISO 22000:2018</h4><p>Oziq-ovqat xavfsizligini boshqarish tizimi</p></div>
+          <div class="cert reveal reveal-delay-1"><div class="cert__seal">HACCP</div><h4>HACCP</h4><p>Xavflarni tahlil qilish va nazorat nuqtalari</p></div>
+          <div class="cert reveal reveal-delay-2"><div class="cert__seal">HALAL</div><h4>Halal sertifikati</h4><p>World Halal Trust tomonidan berilgan</p></div>
+          <div class="cert reveal reveal-delay-3"><div class="cert__seal">UZ</div><h4>Muvofiqlik sertifikati</h4><p>O'zbekiston milliy sertifikatlash tizimi</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container">
         <div class="section__head section__head--center reveal">
           <span class="eyebrow">Nega Aberno</span>
           <h2>Hamkorlar bizni nima uchun tanlaydi</h2>
         </div>
         <div class="grid-4">
-          <div class="card reveal">
+          <div class="card reveal"><span class="card__num">01</span>
             <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-            <h3>Barqaror sifat</h3>
-            <p>Har bir partiya ishlab chiqarishning barcha bosqichlarida nazoratdan o'tadi.</p>
-          </div>
-          <div class="card reveal">
-            <div class="card__icon card__icon--butter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
-            <h3>O'z ishlab chiqarishimiz</h3>
-            <p>Mahsulotlar O'zbekistondagi ishlab chiqarish quvvatlarimizda tayyorlanadi.</p>
-          </div>
-          <div class="card reveal">
-            <div class="card__icon card__icon--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
-            <h3>Eksport salohiyati</h3>
-            <p>BULUT brendi O'rta Osiyo bozorlariga eksportni jadal rivojlantirmoqda.</p>
-          </div>
-          <div class="card reveal">
+            <h3>Barqaror sifat</h3><p>Har bir partiya ishlab chiqarishning barcha bosqichlarida nazoratdan o'tadi.</p></div>
+          <div class="card reveal reveal-delay-1"><span class="card__num">02</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
+            <h3>O'z ishlab chiqarishimiz</h3><p>Xomashyodan tayyor mahsulotgacha — o'z quvvatlarimizda.</p></div>
+          <div class="card reveal reveal-delay-2"><span class="card__num">03</span>
+            <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+            <h3>Eksport salohiyati</h3><p>BULUT brendi O'rta Osiyo bozorlariga eksportni jadal rivojlantirmoqda.</p></div>
+          <div class="card reveal reveal-delay-3"><span class="card__num">04</span>
             <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3>Kuchli jamoa</h3>
-            <p>150 dan ortiq mutaxassis har kuni sifatli mahsulot uchun mehnat qiladi.</p>
-          </div>
+            <h3>Kuchli jamoa</h3><p>150 dan ortiq mutaxassis har kuni sifatli mahsulot uchun mehnat qiladi.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Eksport -->
-    <section class="section">
-      <div class="container split">
-        <div class="reveal">
-          <img class="emblem emblem--section emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615">
-          <h2>O'rta Osiyo bozorlariga eksport</h2>
-          <p class="lead">Biz qo'shni davlatlardagi distribyutorlar va savdo tarmoqlari bilan hamkorlikni kengaytirmoqdamiz.</p>
-          <ul class="checklist">
-            <li>Distribyutorlar uchun moslashuvchan hamkorlik shartlari</li>
-            <li>Ulgurji hajmlar va barqaror yetkazib berish</li>
-            <li>Private label bo'yicha muzokaralar uchun ochiqmiz</li>
-          </ul>
-          <a href="export.html" class="btn btn--primary" style="margin-top:12px">Eksport haqida batafsil</a>
-        </div>
-        <div class="split__visual reveal" aria-hidden="true">
-          <svg viewBox="0 0 300 220">
-            <circle cx="150" cy="110" r="22" fill="#0f2a4a"/>
-            <text x="150" y="115" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">UZ</text>
-            <g stroke="#2f8fe0" stroke-width="2" stroke-dasharray="5 5" fill="none">
-              <path d="M150 88 Q150 40 150 30"/>
-              <path d="M172 110 Q230 110 260 90"/>
-              <path d="M165 127 Q210 170 240 180"/>
-              <path d="M128 110 Q80 130 45 150"/>
-            </g>
-            <g font-size="12" font-weight="700" fill="#0f2a4a" text-anchor="middle">
-              <circle cx="150" cy="22" r="16" fill="#e8f3fd" stroke="#2f8fe0" stroke-width="2"/><text x="150" y="26">KZ</text>
-              <circle cx="266" cy="84" r="16" fill="#e8f3fd" stroke="#2f8fe0" stroke-width="2"/><text x="266" y="88">KG</text>
-              <circle cx="248" cy="186" r="16" fill="#e8f3fd" stroke="#2f8fe0" stroke-width="2"/><text x="248" y="190">TJ</text>
-              <circle cx="38" cy="156" r="16" fill="#e8f3fd" stroke="#2f8fe0" stroke-width="2"/><text x="38" y="160">TM</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="cta reveal">
+        <div class="cta dark-zone reveal">
+          <div class="aurora" aria-hidden="true"><span></span></div>
+          <div class="grain" aria-hidden="true"></div>
           <div>
+            <span class="eyebrow">Hamkorlik</span>
             <h2>Hamkorlikka tayyormisiz?</h2>
-            <p>Distribyutor, savdo tarmog'i yoki HoReCa bo'lsangiz — biz bilan bog'laning.</p>
+            <p>Distribyutor, savdo tarmog'i, nonvoyxona yoki HoReCa bo'lsangiz — biz bilan bog'laning.</p>
           </div>
           <div class="cta__actions">
-            <a href="contact.html" class="btn btn--light">So'rov qoldirish</a>
+            <a href="contact.html" class="btn btn--primary">So'rov qoldirish</a>
+            <a href="export.html" class="btn btn--ghost-light">Eksport</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer dark-zone">
+    <div class="aurora" aria-hidden="true"><span></span></div>
+    <div class="grain" aria-hidden="true"></div>
     <div class="container">
       <div class="footer__grid">
         <div>
-          <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
-          <p>2021-yildan beri sanitar-gigiena mahsulotlari va margarin ishlab chiqaramiz.</p>
+          <a href="index.html" class="logo" aria-label="Aberno Group"><img class="logo__mark" src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
+          <p>2021-yildan beri sanitar-gigiena mahsulotlari, qog'oz xomashyosi, margarin va spredlar ishlab chiqaramiz.</p>
+          <div class="socials">
+            <a class="social" href="https://t.me/aberno_uz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6z"/></svg> aberno_uz</a>
+            <a class="social" href="https://www.instagram.com/aberno.uz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> aberno.uz</a>
+          </div>
         </div>
         <div>
           <h4>Kompaniya</h4>
@@ -228,7 +251,8 @@
         <div>
           <h4>Brendlar</h4>
           <ul>
-            <li><a href="bulut.html"><img class="emblem emblem--footer emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a></li>
+            <li><a href="bulut.html">BULUT</a></li>
+            <li><a href="xomashyo.html">BULUT xomashyosi</a></li>
             <li><a href="margarin.html">MARGARITTO</a></li>
             <li><a href="margarin.html">SMAYLO</a></li>
           </ul>
@@ -237,13 +261,19 @@
           <h4>Aloqa</h4>
           <ul>
             <li><a href="tel:+998953427070">+998 95 342-70-70</a></li>
+            <li><a href="tel:+998712300900">+998 71 230-09-00</a></li>
             <li><a href="mailto:info@aberno.uz">info@aberno.uz</a></li>
-            <li>O'zbekiston</li>
+            <li>Toshkent sh., Yashnobod tumani, Uysozlar ko'chasi, 72</li>
           </ul>
         </div>
       </div>
+      <div class="footer__brands">
+        <a href="bulut.html"><img class="emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
+        <a href="margarin.html"><img src="images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html"><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+      </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> Aberno. Barcha huquqlar himoyalangan.</span>
+        <span>© <span data-year>2026</span> Aberno Group. Barcha huquqlar himoyalangan.</span>
         <span>aberno.uz</span>
       </div>
     </div>

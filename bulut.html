@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BULUT — sanitar-gigiena mahsulotlari | Aberno</title>
+  <title>BULUT — sanitar-gigiena mahsulotlari | Aberno Group</title>
   <meta name="description" content="BULUT mahsulotlari katalogi: qog'oz va nam salfetkalar, qutidagi salfetkalar, qog'oz sochiqlar, hojatxona qog'ozi va HoReCa dispenserlari.">
+  <meta name="theme-color" content="#0b1a2e">
+  <link rel="icon" type="image/png" href="images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
   <script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,12 +17,12 @@
 
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
+      <a href="index.html" class="logo" aria-label="Aberno Group — Bosh sahifa"><img class="logo__mark" src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Asosiy menyu">
-        <a href="index.html" class="nav__link">Bosh sahifa</a>
         <a href="about.html" class="nav__link">Kompaniya</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--auto" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
+        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
         <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <a href="xomashyo.html" class="nav__link">Xomashyo</a>
         <a href="export.html" class="nav__link">Eksport</a>
         <a href="contact.html" class="btn btn--primary">Bog'lanish</a>
       </nav>
@@ -41,14 +43,25 @@
   </header>
 
   <main>
-    <section class="page-hero page-hero--bulut">
+    <section class="page-hero page-hero--split dark-zone">
+      <div class="aurora" aria-hidden="true"><span></span></div>
+      <div class="lines" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
       <div class="container">
-        <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / BULUT</div>
-        <h1><img class="emblem emblem--hero emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></h1>
-        <p>Bulutdek yumshoq. Uy, ofis va HoReCa uchun sanitar-gigiena mahsulotlari — O'zbekistonda ishlab chiqarilgan va O'rta Osiyo bozorlariga eksport qilinmoqda.</p>
-        <div class="hero__actions page-hero__actions">
-          <a href="#mahsulotlar" class="btn btn--light">Mahsulotlar</a>
-          <a href="#katalog" class="btn btn--ghost-light">Katalog (PDF)</a>
+        <div>
+          <div class="breadcrumb"><a href="index.html">Bosh sahifa</a> / BULUT</div>
+          <h1><img class="emblem emblem--hero emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></h1>
+          <p>Bulutdek yumshoq. Uy, ofis va HoReCa uchun 35 dan ortiq sanitar-gigiena mahsuloti — O'zbekistonda ishlab chiqarilgan va O'rta Osiyo bozorlariga eksport qilinmoqda.</p>
+          <div class="page-hero__actions">
+            <a href="#mahsulotlar" class="btn btn--primary">Mahsulotlar</a>
+            <a href="#katalog" class="btn btn--ghost-light">Katalog (PDF)</a>
+            <a href="xomashyo.html" class="btn btn--ghost-light">Xomashyo</a>
+          </div>
+        </div>
+        <div class="page-hero__art reveal" aria-hidden="true">
+          <figure class="float-card" style="position:relative;width:100%;aspect-ratio:1/1;animation:bob 10s ease-in-out infinite">
+            <img src="images/bulut-brand.jpg" alt="" style="object-position:50% 30%">
+          </figure>
         </div>
       </div>
     </section>
@@ -605,19 +618,25 @@
             <li>Salfetka va qog'oz uchun mos dispenserlar</li>
             <li>O'rta Osiyo bozorlariga eksport qilinadi</li>
           </ul>
+          <div class="socials socials--light" style="margin-top:26px">
+            <a class="social" href="https://t.me/bulut_napkin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6z"/></svg> bulut_napkin</a>
+            <a class="social" href="https://www.instagram.com/bulut.napkins/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> bulut.napkins</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="cta reveal">
+        <div class="cta dark-zone reveal">
+          <div class="aurora" aria-hidden="true"><span></span></div>
+          <div class="grain" aria-hidden="true"></div>
           <div>
             <h2>BULUT'ni ulgurji buyurtma qiling</h2>
             <p>Distribyutorlar, savdo tarmoqlari va eksport hamkorlari uchun.</p>
           </div>
           <div class="cta__actions">
-            <a href="contact.html" class="btn btn--light">So'rov qoldirish</a>
+            <a href="contact.html" class="btn btn--primary">So'rov qoldirish</a>
             <a href="export.html" class="btn btn--ghost-light">Eksport</a>
           </div>
         </div>
@@ -625,12 +644,18 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer dark-zone">
+    <div class="aurora" aria-hidden="true"><span></span></div>
+    <div class="grain" aria-hidden="true"></div>
     <div class="container">
       <div class="footer__grid">
         <div>
-          <a href="index.html" class="logo"><span class="logo__mark">A</span>Aberno</a>
-          <p>2021-yildan beri sanitar-gigiena mahsulotlari va margarin ishlab chiqaramiz.</p>
+          <a href="index.html" class="logo" aria-label="Aberno Group"><img class="logo__mark" src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
+          <p>2021-yildan beri sanitar-gigiena mahsulotlari, qog'oz xomashyosi, margarin va spredlar ishlab chiqaramiz.</p>
+          <div class="socials">
+            <a class="social" href="https://t.me/aberno_uz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6z"/></svg> aberno_uz</a>
+            <a class="social" href="https://www.instagram.com/aberno.uz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> aberno.uz</a>
+          </div>
         </div>
         <div>
           <h4>Kompaniya</h4>
@@ -643,7 +668,8 @@
         <div>
           <h4>Brendlar</h4>
           <ul>
-            <li><a href="bulut.html"><img class="emblem emblem--footer emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a></li>
+            <li><a href="bulut.html">BULUT</a></li>
+            <li><a href="xomashyo.html">BULUT xomashyosi</a></li>
             <li><a href="margarin.html">MARGARITTO</a></li>
             <li><a href="margarin.html">SMAYLO</a></li>
           </ul>
@@ -652,13 +678,19 @@
           <h4>Aloqa</h4>
           <ul>
             <li><a href="tel:+998953427070">+998 95 342-70-70</a></li>
+            <li><a href="tel:+998712300900">+998 71 230-09-00</a></li>
             <li><a href="mailto:info@aberno.uz">info@aberno.uz</a></li>
-            <li>O'zbekiston</li>
+            <li>Toshkent sh., Yashnobod tumani, Uysozlar ko'chasi, 72</li>
           </ul>
         </div>
       </div>
+      <div class="footer__brands">
+        <a href="bulut.html"><img class="emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
+        <a href="margarin.html"><img src="images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html"><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+      </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> Aberno. Barcha huquqlar himoyalangan.</span>
+        <span>© <span data-year>2026</span> Aberno Group. Barcha huquqlar himoyalangan.</span>
         <span>aberno.uz</span>
       </div>
     </div>

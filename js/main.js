@@ -181,6 +181,65 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
+  // Hero: kartalar sichqonchaga yengil ergashadi
+  const visual = document.querySelector(".hero__visual");
+  if (visual && window.matchMedia("(pointer: fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const cards = visual.querySelectorAll(".float-card");
+    visual.closest(".hero").addEventListener("mousemove", (e) => {
+      const r = visual.getBoundingClientRect();
+      const x = (e.clientX - r.left - r.width / 2) / r.width;
+      const y = (e.clientY - r.top - r.height / 2) / r.height;
+      cards.forEach((c, i) => {
+        const k = i === 0 ? 14 : -10;
+        c.style.transform = `rotateY(${x * k}deg) rotateX(${-y * k}deg)`;
+      });
+    });
+  }
+
+  // Xomashyo: narx so'rovi formasi
+  document.querySelectorAll('input[type="range"][data-output]').forEach((range) => {
+    const out = document.getElementById(range.dataset.output);
+    const sync = () => (out.textContent = range.value + (range.dataset.unit || ""));
+    range.addEventListener("input", sync);
+    sync();
+  });
+  const quote = document.querySelector("#quote-form");
+  if (quote) {
+    quote.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+      quote.querySelectorAll("[required]").forEach((input) => {
+        const field = input.closest(".field");
+        let ok = input.value.trim() !== "";
+        if (ok && input.type === "tel") ok = /^[+\d\s()-]{9,}$/.test(input.value.trim());
+        field.classList.toggle("has-error", !ok);
+        if (!ok) valid = false;
+      });
+      if (!valid) return;
+      const list = quote.querySelector(".quote-result ul");
+      list.innerHTML = "";
+      quote.querySelectorAll("[data-summary]").forEach((group) => {
+        const label = group.dataset.summary;
+        let value = "";
+        const checked = group.querySelector("input:checked");
+        const control = group.querySelector("input:not([type=radio]), select");
+        if (checked) value = checked.value;
+        else if (control) value = control.value + (control.dataset.unit || "");
+        if (!value) return;
+        const li = document.createElement("li");
+        li.textContent = `${label}: ${value}`;
+        list.appendChild(li);
+      });
+      quote.querySelector(".quote-result").classList.add("is-visible");
+    });
+    quote.querySelectorAll("input, select, textarea").forEach((input) =>
+      input.addEventListener("input", () => {
+        const f = input.closest(".field");
+        if (f) f.classList.remove("has-error");
+      })
+    );
+  }
+
   // Footer yili
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 });
