@@ -95,7 +95,7 @@
           <div class="spec reveal reveal-delay-2"><strong>1 · 2 · 3</strong><span>слоя</span></div>
           <div class="spec reveal reveal-delay-3"><strong>Ø 1200</strong><span>мм — диаметр рулона</span></div>
           <div class="spec reveal"><strong>≤ 2000</strong><span>мм — ширина рулона</span></div>
-          <div class="spec reveal reveal-delay-1"><strong>ГОСТ</strong><span>производство по ГОСТ 3398:2019</span></div>
+          <div class="spec reveal reveal-delay-1"><strong>O'z DSt</strong><span>соответствует стандарту 3398:2019</span></div>
           <div class="spec reveal reveal-delay-2"><strong>EU</strong><span>европейские химикаты</span></div>
           <div class="spec reveal reveal-delay-3"><strong>0%</strong><span>примесей макулатуры</span></div>
         </div>
@@ -164,13 +164,25 @@
         </div>
         <div class="reveal reveal-delay-1">
           <div class="capacity" style="grid-template-columns:1fr 1fr">
-            <div><strong>5</strong><span>стран поставки</span></div>
-            <div><strong>15–24</strong><span>г/м² — выбор плотности</span></div>
+            <div><strong>10 т</strong><span>минимальный заказ на экспорт</span></div>
+            <div><strong>4 т</strong><span>минимальный заказ для внутреннего рынка</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section" id="sertifikatlar">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Документы</span>
+          <h2>Сертификаты и разрешения</h2>
+          <p class="lead">Бумага-основа соответствует стандарту O'z DSt 3398:2019. Нажмите на документ, чтобы увеличить его.</p>
+        </div>
+        <div class="docs docs--3">
+          <button type="button" class="doc reveal" data-lightbox="../images/certs/rulon-muvofiqlik-2026.jpg"><span class="doc__thumb"><img src="../images/certs/rulon-muvofiqlik-2026.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Сертификат соответствия</strong><span class="doc__line">Бумага санитарно-гигиеническая в рулонах</span><span class="doc__line">UZ.SMT-01-0009-171512</span><span class="doc__badge">Действует до 24.02.2029</span></span></button>          <button type="button" class="doc reveal" data-lightbox="../images/certs/bulut-sanepid-2025.jpg"><span class="doc__thumb"><img src="../images/certs/bulut-sanepid-2025.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Санитарно-эпидемиологическое заключение</strong><span class="doc__line">Бумага в рулонах, туалетная бумага, салфетки, полотенца</span><span class="doc__line">№ 480100</span><span class="doc__badge">Действует до 25.05.2028</span></span></button>          <button type="button" class="doc reveal" data-lightbox="../images/certs/bulut-tovar-belgisi.jpg"><span class="doc__thumb"><img src="../images/certs/bulut-tovar-belgisi.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Свидетельство на товарный знак</strong><span class="doc__line">BULUT — зарегистрированный товарный знак</span><span class="doc__line">MGU 57599 · Министерство юстиции</span><span class="doc__badge">Действует до 23.01.2035</span></span></button>
+        </div>
+      </div>
+    </section>
     <section class="section section--soft" id="hisoblash">
       <div class="container quote">
         <div class="reveal">
@@ -181,6 +193,7 @@
             <li>Плотность, слойность и ширина — под ваш заказ</li>
             <li>Цена напрямую от производителя</li>
             <li>Поставка по всей Центральной Азии</li>
+            <li>Минимальный заказ: внутренний рынок — 4 т, экспорт — 10 т</li>
           </ul>
           <p style="margin-top:24px"><a class="btn btn--outline" href="tel:+998953427070">+998 95 342-70-70</a></p>
         </div>
@@ -205,7 +218,8 @@
             </div>
             <div class="field" data-summary="Объём">
               <label for="tons">Объём (тонн)</label>
-              <input id="tons" type="number" min="1" step="1" value="20" data-unit=" т">
+              <input id="tons" type="number" min="4" step="1" value="20" data-unit=" т" data-min-local="4" data-min-export="10">
+              <small id="tons-hint" class="consent" data-local="Минимальный заказ для внутреннего рынка — 4 т" data-export="Минимальный заказ на экспорт — 10 т"></small>
             </div>
           </div>
           <div class="field" data-summary="Страна">
@@ -225,6 +239,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn--primary">Запросить цену</button>
+          <p class="consent">Отправляя форму, вы соглашаетесь на обработку данных в соответствии с <a href="maxfiylik.html">политикой конфиденциальности</a>.</p>
           <div class="quote-result" role="status">
             <h4>Ваш запрос готов</h4>
             <ul></ul>
@@ -271,6 +286,7 @@
           <ul>
             <li><a href="about.html">О компании</a></li>
             <li><a href="export.html">Экспорт</a></li>
+            <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
           </ul>
         </div>
@@ -300,7 +316,7 @@
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>
-        <span>aberno.uz</span>
+        <a href="maxfiylik.html">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>

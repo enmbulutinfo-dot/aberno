@@ -95,7 +95,7 @@
           <div class="spec reveal reveal-delay-2"><strong>1 · 2 · 3</strong><span>qatlam</span></div>
           <div class="spec reveal reveal-delay-3"><strong>Ø 1200</strong><span>mm — rulon diametri</span></div>
           <div class="spec reveal"><strong>≤ 2000</strong><span>mm — rulon kengligi</span></div>
-          <div class="spec reveal reveal-delay-1"><strong>GOST</strong><span>3398:2019 bo'yicha ishlab chiqarish</span></div>
+          <div class="spec reveal reveal-delay-1"><strong>O'z DSt</strong><span>3398:2019 standartiga muvofiq</span></div>
           <div class="spec reveal reveal-delay-2"><strong>EU</strong><span>Yevropa kimyoviy moddalari</span></div>
           <div class="spec reveal reveal-delay-3"><strong>0%</strong><span>makulatura aralashmasi</span></div>
         </div>
@@ -164,13 +164,25 @@
         </div>
         <div class="reveal reveal-delay-1">
           <div class="capacity" style="grid-template-columns:1fr 1fr">
-            <div><strong>5</strong><span>davlatga yetkazib berish</span></div>
-            <div><strong>15–24</strong><span>g/m² — zichlik tanlovi</span></div>
+            <div><strong>10 t</strong><span>eksport uchun minimal buyurtma</span></div>
+            <div><strong>4 t</strong><span>ichki bozor uchun minimal buyurtma</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section" id="sertifikatlar">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Hujjatlar</span>
+          <h2>Sertifikatlar va ruxsatnomalar</h2>
+          <p class="lead">Asos qog'oz O'z DSt 3398:2019 standartiga muvofiq. Hujjatni kattalashtirib ko'rish uchun ustiga bosing.</p>
+        </div>
+        <div class="docs docs--3">
+          <button type="button" class="doc reveal" data-lightbox="images/certs/rulon-muvofiqlik-2026.jpg"><span class="doc__thumb"><img src="images/certs/rulon-muvofiqlik-2026.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Muvofiqlik sertifikati</strong><span class="doc__line">Rulondagi sanitar-gigiena qog'ozi</span><span class="doc__line">UZ.SMT-01-0009-171512</span><span class="doc__badge">24.02.2029 gacha amal qiladi</span></span></button>          <button type="button" class="doc reveal" data-lightbox="images/certs/bulut-sanepid-2025.jpg"><span class="doc__thumb"><img src="images/certs/bulut-sanepid-2025.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Sanitariya-epidemiologik xulosa</strong><span class="doc__line">Rulon, hojatxona qog'ozi, salfetka, sochiq</span><span class="doc__line">№ 480100</span><span class="doc__badge">25.05.2028 gacha amal qiladi</span></span></button>          <button type="button" class="doc reveal" data-lightbox="images/certs/bulut-tovar-belgisi.jpg"><span class="doc__thumb"><img src="images/certs/bulut-tovar-belgisi.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Tovar belgisi guvohnomasi</strong><span class="doc__line">BULUT — ro'yxatdan o'tgan tovar belgisi</span><span class="doc__line">MGU 57599 · Adliya vazirligi</span><span class="doc__badge">23.01.2035 gacha amal qiladi</span></span></button>
+        </div>
+      </div>
+    </section>
     <section class="section section--soft" id="hisoblash">
       <div class="container quote">
         <div class="reveal">
@@ -181,6 +193,7 @@
             <li>Zichlik, qatlam va kenglik — buyurtmangizga moslab</li>
             <li>To'g'ridan-to'g'ri ishlab chiqaruvchi narxi</li>
             <li>O'rta Osiyo bo'ylab yetkazib berish</li>
+            <li>Minimal buyurtma: ichki bozor — 4 t, eksport — 10 t</li>
           </ul>
           <p style="margin-top:24px"><a class="btn btn--outline" href="tel:+998953427070">+998 95 342-70-70</a></p>
         </div>
@@ -205,7 +218,8 @@
             </div>
             <div class="field" data-summary="Hajm">
               <label for="tons">Hajm (tonna)</label>
-              <input id="tons" type="number" min="1" step="1" value="20" data-unit=" t">
+              <input id="tons" type="number" min="4" step="1" value="20" data-unit=" t" data-min-local="4" data-min-export="10">
+              <small id="tons-hint" class="consent" data-local="Ichki bozor uchun minimal buyurtma — 4 t" data-export="Eksport uchun minimal buyurtma — 10 t"></small>
             </div>
           </div>
           <div class="field" data-summary="Davlat">
@@ -225,6 +239,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn--primary">Narxni so'rash</button>
+          <p class="consent">Yuborish orqali siz <a href="maxfiylik.html">maxfiylik siyosatiga</a> muvofiq ma'lumotlaringizni qayta ishlashga rozilik bildirasiz.</p>
           <div class="quote-result" role="status">
             <h4>So'rovingiz tayyor</h4>
             <ul></ul>
@@ -271,6 +286,7 @@
           <ul>
             <li><a href="about.html">Biz haqimizda</a></li>
             <li><a href="export.html">Eksport</a></li>
+            <li><a href="karyera.html">Karyera</a></li>
             <li><a href="contact.html">Aloqa</a></li>
           </ul>
         </div>
@@ -300,7 +316,7 @@
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Barcha huquqlar himoyalangan.</span>
-        <span>aberno.uz</span>
+        <a href="maxfiylik.html">Maxfiylik siyosati</a>
       </div>
     </div>
   </footer>

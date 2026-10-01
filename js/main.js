@@ -240,6 +240,50 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
+  // Sertifikatlarni kattalashtirib ko'rish
+  const docs = document.querySelectorAll("[data-lightbox]");
+  if (docs.length) {
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = '<button class="lightbox__close" type="button" aria-label="×">×</button><img alt="">';
+    document.body.appendChild(box);
+    const img = box.querySelector("img");
+    const close = () => {
+      box.classList.remove("is-open");
+      document.body.classList.remove("no-scroll");
+    };
+    docs.forEach((d) =>
+      d.addEventListener("click", () => {
+        img.src = d.dataset.lightbox;
+        img.alt = d.querySelector(".doc__title") ? d.querySelector(".doc__title").textContent : "";
+        box.classList.add("is-open");
+        document.body.classList.add("no-scroll");
+        box.querySelector(".lightbox__close").focus();
+      })
+    );
+    box.addEventListener("click", (e) => { if (e.target !== img) close(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  }
+
+  // Xomashyo: davlatga qarab minimal buyurtma (ichki bozor / eksport)
+  const tons = document.querySelector("#tons[data-min-local]");
+  const qCountry = document.querySelector("#qcountry");
+  if (tons && qCountry) {
+    const hint = document.querySelector("#tons-hint");
+    const syncMin = () => {
+      const local = qCountry.selectedIndex === 0;
+      const min = Number(local ? tons.dataset.minLocal : tons.dataset.minExport);
+      tons.min = min;
+      if (Number(tons.value) < min) tons.value = min;
+      if (hint) hint.textContent = local ? hint.dataset.local : hint.dataset.export;
+    };
+    qCountry.addEventListener("change", syncMin);
+    tons.addEventListener("change", syncMin);
+    syncMin();
+  }
+
   // Footer yili
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 });

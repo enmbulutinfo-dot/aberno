@@ -56,27 +56,41 @@
     </section>
 
     <section class="section">
-      <div class="container split">
-        <div class="reveal">
+      <div class="container">
+        <div class="section__head reveal">
           <span class="eyebrow">География</span>
-          <h2>Наши направления</h2>
-          <p class="lead">Нажмите на страну на карте или наведите на неё курсор.</p>
-          <div class="country-info">Узбекистан — производственный центр.</div>
+          <h2>Наши экспортные направления</h2>
+          <p class="lead">Проведите курсором по карте — страны подсвечиваются.</p>
         </div>
-        <div class="map-wrap reveal reveal-delay-1">
-          <svg viewBox="40 20 740 400" role="img" aria-label="Схематичная карта Центральной Азии">
-            <path class="map-country" data-info="Казахстан — экспортное направление, открыты к сотрудничеству." d="M60 40 L700 30 L760 120 L640 200 L520 190 L430 210 L330 170 L220 190 L120 160 L50 110 Z"/>
-            <path class="map-country" data-info="Туркменистан — экспортное направление, открыты к сотрудничеству." d="M120 200 L220 190 L200 240 L260 260 L330 300 L380 330 L340 400 L230 410 L130 370 L90 290 Z"/>
-            <path class="map-country" data-info="Кыргызстан — экспортное направление, открыты к сотрудничеству." d="M520 190 L640 200 L760 190 L740 250 L620 270 L560 230 Z"/>
-            <path class="map-country" data-info="Таджикистан — экспортное направление, открыты к сотрудничеству." d="M500 260 L560 230 L620 270 L660 300 L620 360 L520 360 L470 320 L440 300 Z"/>
-            <path class="map-country map-country--home" data-info="Узбекистан — производственный центр." d="M220 190 L330 170 L430 210 L520 190 L560 230 L500 260 L440 300 L380 330 L330 300 L260 260 L200 240 Z"/>
-            <text class="map-label" x="400" y="110" text-anchor="middle">Казахстан</text>
-            <text class="map-label" x="220" y="330" text-anchor="middle">Туркменистан</text>
-            <text class="map-label" x="660" y="235" text-anchor="middle">Кыргызстан</text>
-            <text class="map-label" x="560" y="320" text-anchor="middle">Таджикистан</text>
-            <text class="map-label map-label--light" x="380" y="245" text-anchor="middle">Узбекистан</text>
-          </svg>
+        <div class="geo dark-zone reveal" id="geo">
+          <div class="aurora" aria-hidden="true"><span></span></div>
+          <div class="grain" aria-hidden="true"></div>
+          <div class="geo__fallback">
+            <svg viewBox="40 20 740 400" role="img" aria-label="Схематичная карта Центральной Азии">
+              <path class="map-country" d="M60 40 L700 30 L760 120 L640 200 L520 190 L430 210 L330 170 L220 190 L120 160 L50 110 Z"/>
+              <path class="map-country" d="M120 200 L220 190 L200 240 L260 260 L330 300 L380 330 L340 400 L230 410 L130 370 L90 290 Z"/>
+              <path class="map-country" d="M520 190 L640 200 L760 190 L740 250 L620 270 L560 230 Z"/>
+              <path class="map-country" d="M500 260 L560 230 L620 270 L660 300 L620 360 L520 360 L470 320 L440 300 Z"/>
+              <path class="map-country map-country--home" d="M220 190 L330 170 L430 210 L520 190 L560 230 L500 260 L440 300 L380 330 L330 300 L260 260 L200 240 Z"/>
+            </svg>
+          </div>
+          <div class="geo__cursor" aria-hidden="true"></div>
+          <div class="geo__panel" aria-live="polite"><strong>Узбекистан</strong><span>Производственный центр — Ташкент.</span></div>
         </div>
+        <script type="application/json" id="geo-data">
+          {"label": "Карта экспорта в Центральную Азию", "home": "860",
+           "countries": {
+             "860": {"name": "Узбекистан", "info": "Производственный центр — Ташкент."},
+             "398": {"name": "Казахстан", "info": "Экспортное направление. Открыты к сотрудничеству с дистрибьюторами.", "offset": [0, -30]},
+             "417": {"name": "Кыргызстан", "info": "Экспортное направление. Открыты к сотрудничеству с дистрибьюторами."},
+             "762": {"name": "Таджикистан", "info": "Экспортное направление. Открыты к сотрудничеству с дистрибьюторами."},
+             "795": {"name": "Туркменистан", "info": "Экспортное направление. Открыты к сотрудничеству с дистрибьюторами."}
+           },
+           "cities": [
+             {"name": "Ташкент", "coords": [69.24, 41.31]}, {"name": "Астана", "coords": [71.43, 51.13]}, {"name": "Алматы", "coords": [76.89, 43.24]},
+             {"name": "Бишкек", "coords": [74.59, 42.87]}, {"name": "Душанбе", "coords": [68.78, 38.56]}, {"name": "Ашхабад", "coords": [58.38, 37.95]}
+           ]}
+        </script>
       </div>
     </section>
 
@@ -95,7 +109,7 @@
             <h3>Гибкие условия</h3><p>Индивидуальные коммерческие предложения в зависимости от объёма и срока сотрудничества.</p></div>
           <div class="card reveal reveal-delay-2"><span class="card__num">03</span>
             <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><path d="M7 7h.01"/></svg></div>
-            <h3>Private label</h3><p>Открыты к переговорам о производстве под собственным брендом партнёра.</p></div>
+            <h3>Private label</h3><p>Производим под собственным брендом партнёра. Минимальный заказ — 1000 мешков.</p></div>
         </div>
       </div>
     </section>
@@ -128,6 +142,9 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <script src="../js/map.js"></script>
   </main>
 
   <footer class="footer dark-zone">
@@ -148,6 +165,7 @@
           <ul>
             <li><a href="about.html">О компании</a></li>
             <li><a href="export.html">Экспорт</a></li>
+            <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
           </ul>
         </div>
@@ -177,7 +195,7 @@
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>
-        <span>aberno.uz</span>
+        <a href="maxfiylik.html">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>

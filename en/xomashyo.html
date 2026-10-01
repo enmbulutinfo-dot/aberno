@@ -95,7 +95,7 @@
           <div class="spec reveal reveal-delay-2"><strong>1 · 2 · 3</strong><span>plies</span></div>
           <div class="spec reveal reveal-delay-3"><strong>Ø 1200</strong><span>mm — roll diameter</span></div>
           <div class="spec reveal"><strong>≤ 2000</strong><span>mm — roll width</span></div>
-          <div class="spec reveal reveal-delay-1"><strong>GOST</strong><span>produced to GOST 3398:2019</span></div>
+          <div class="spec reveal reveal-delay-1"><strong>O'z DSt</strong><span>conforms to the 3398:2019 standard</span></div>
           <div class="spec reveal reveal-delay-2"><strong>EU</strong><span>European chemicals</span></div>
           <div class="spec reveal reveal-delay-3"><strong>0%</strong><span>recycled paper content</span></div>
         </div>
@@ -164,13 +164,25 @@
         </div>
         <div class="reveal reveal-delay-1">
           <div class="capacity" style="grid-template-columns:1fr 1fr">
-            <div><strong>5</strong><span>countries supplied</span></div>
-            <div><strong>15–24</strong><span>g/m² — grammage options</span></div>
+            <div><strong>10 t</strong><span>minimum order for export</span></div>
+            <div><strong>4 t</strong><span>minimum order for the domestic market</span></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section" id="sertifikatlar">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Documents</span>
+          <h2>Certificates and permits</h2>
+          <p class="lead">Our base paper conforms to the O'z DSt 3398:2019 standard. Click a document to enlarge it.</p>
+        </div>
+        <div class="docs docs--3">
+          <button type="button" class="doc reveal" data-lightbox="../images/certs/rulon-muvofiqlik-2026.jpg"><span class="doc__thumb"><img src="../images/certs/rulon-muvofiqlik-2026.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Certificate of conformity</strong><span class="doc__line">Sanitary paper in rolls</span><span class="doc__line">UZ.SMT-01-0009-171512</span><span class="doc__badge">Valid until 24.02.2029</span></span></button>          <button type="button" class="doc reveal" data-lightbox="../images/certs/bulut-sanepid-2025.jpg"><span class="doc__thumb"><img src="../images/certs/bulut-sanepid-2025.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Sanitary-epidemiological conclusion</strong><span class="doc__line">Paper rolls, toilet paper, napkins, towels</span><span class="doc__line">№ 480100</span><span class="doc__badge">Valid until 25.05.2028</span></span></button>          <button type="button" class="doc reveal" data-lightbox="../images/certs/bulut-tovar-belgisi.jpg"><span class="doc__thumb"><img src="../images/certs/bulut-tovar-belgisi.jpg" alt="" loading="lazy" width="1000" height="1415"></span><span class="doc__body"><strong class="doc__title">Trademark certificate</strong><span class="doc__line">BULUT — registered trademark</span><span class="doc__line">MGU 57599 · Ministry of Justice</span><span class="doc__badge">Valid until 23.01.2035</span></span></button>
+        </div>
+      </div>
+    </section>
     <section class="section section--soft" id="hisoblash">
       <div class="container quote">
         <div class="reveal">
@@ -181,6 +193,7 @@
             <li>Grammage, plies and width — tailored to your order</li>
             <li>Direct manufacturer pricing</li>
             <li>Delivery across Central Asia</li>
+            <li>Minimum order: domestic market — 4 t, export — 10 t</li>
           </ul>
           <p style="margin-top:24px"><a class="btn btn--outline" href="tel:+998953427070">+998 95 342-70-70</a></p>
         </div>
@@ -205,7 +218,8 @@
             </div>
             <div class="field" data-summary="Volume">
               <label for="tons">Volume (tonnes)</label>
-              <input id="tons" type="number" min="1" step="1" value="20" data-unit=" t">
+              <input id="tons" type="number" min="4" step="1" value="20" data-unit=" t" data-min-local="4" data-min-export="10">
+              <small id="tons-hint" class="consent" data-local="Minimum order for the domestic market — 4 t" data-export="Minimum order for export — 10 t"></small>
             </div>
           </div>
           <div class="field" data-summary="Country">
@@ -225,6 +239,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn--primary">Request a price</button>
+          <p class="consent">By submitting this form, you agree to the processing of your data in line with our <a href="maxfiylik.html">privacy policy</a>.</p>
           <div class="quote-result" role="status">
             <h4>Your request is ready</h4>
             <ul></ul>
@@ -271,6 +286,7 @@
           <ul>
             <li><a href="about.html">About us</a></li>
             <li><a href="export.html">Export</a></li>
+            <li><a href="karyera.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -300,7 +316,7 @@
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. All rights reserved.</span>
-        <span>aberno.uz</span>
+        <a href="maxfiylik.html">Privacy policy</a>
       </div>
     </div>
   </footer>
