@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MARGARITTO and SMAYLO — margarine and spreads | Aberno Group</title>
   <meta name="description" content="Margaritto margarines and Smaylo spreads: 200–500 g packs for home and 2.5–20 kg professional packs. Puff pastry, creams, universal margarine and 99% rendered vegetable fat.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Home"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Main menu">
-        <a href="about.html" class="nav__link">Company</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">About us<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Company</a>
+            <a href="sertifikatlar.html">Certificates</a>
+            <a href="karyera.html">Careers</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Products<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Hygiene products</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Napkins and toilet paper</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Spreads</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Margarines</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Premium butter</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Raw materials</a>
         <a href="export.html" class="nav__link">Export</a>
         <a href="contact.html" class="btn btn--primary">Contact us</a>
@@ -43,7 +59,7 @@
   </header>
 
   <main>
-    <section class="page-hero page-hero--split dark-zone">
+    <section class="page-hero page-hero--split theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
@@ -52,7 +68,7 @@
           <div class="breadcrumb"><a href="index.html">Home</a> / Margaritto &amp; Smaylo</div>
           <div class="page-hero__logos">
             <img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805">
-            <img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508" style="height:60px">
+            <img class="emblem--auto" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508" style="height:60px">
           </div>
           <h1>Culinary <span class="gold-text">is art</span></h1>
           <p>Margarine, spreads and rendered vegetable fat for home bakers, bakeries and confectionery workshops. 200–500 g packs for home and 2.5–20 kg professional packs.</p>
@@ -63,7 +79,7 @@
         </div>
         <div class="page-hero__art reveal" aria-hidden="true">
           <figure class="float-card" style="position:relative;width:100%;aspect-ratio:1/1;animation:bob 10s ease-in-out infinite">
-            <img src="../images/marg/marg-katalog-muqova.jpg" alt="">
+            <img src="../images/marg/margaritto-pastry-80.jpg" alt="">
           </figure>
         </div>
       </div>
@@ -89,11 +105,11 @@
         </div>
         <div class="filters" role="group" aria-label="Groups">
           <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All<span class="filter__count">12</span></button>
-          <button type="button" class="filter" data-filter="retail" aria-pressed="false">For home · 200–500 g<span class="filter__count">4</span></button>
-          <button type="button" class="filter" data-filter="pro" aria-pressed="false">Professional · 2.5–20 kg<span class="filter__count">8</span></button>
+          <button type="button" class="filter" data-filter="margaritto" aria-pressed="false">Margaritto<span class="filter__count">8</span></button>
+          <button type="button" class="filter" data-filter="smaylo" aria-pressed="false">Smaylo and &ldquo;Slivochny Zavtrak&rdquo;<span class="filter__count">4</span></button>
         </div>
-        <div class="cat-group" data-cat="retail">
-          <div class="cat-group__head"><h3>For home · 200–500 g</h3></div>
+        <div class="cat-group" data-cat="margaritto" id="margaritto">
+          <div class="cat-group__head cat-group__head--brand"><h3><img class="brand-logo-margaritto" src="../images/brand/margaritto-logo.png" alt="Margaritto" height="56"></h3><span>Margaritto</span></div>
           <div class="mgrid">
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/margaritto-universal-80.jpg" alt="Margaritto Universal 80%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">MARGARITTO</span><span class="mproduct__fat">80%<small>fat</small></span></div>
@@ -123,39 +139,6 @@
                 <details><summary>Details</summary><p>Specially designed for laminated dough and mainly used by homemakers. Gives distinct, well-separated layers and good volume. Not recommended for other confectionery.</p></details>
               </div>
             </article>
-            <article class="mproduct reveal">
-              <div class="mproduct__media"><img src="../images/marg/smaylo-spread-82.jpg" alt="Smaylo spread 82.5%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">82.5%<small>fat</small></span></div>
-              <div class="mproduct__body">
-                <h4>Smaylo spread 82.5%</h4>
-                <div class="uses"><span>Breakfast</span><span>Cakes and muffins</span><span>Creams and glazes</span><span>Pasta, porridge and sides</span></div>
-                <ul class="product__list">
-                  <li><span>Type</span><span>Vegetable-cream spread</span></li>
-                  <li><span>Packaging</span><span>Brick pack 200 g / 500 g</span></li>
-                  <li><span>Per box</span><span>200 g × 30 = 6 kg; 500 g × 10 = 5 kg</span></li>
-                  <li><span>Box size</span><span>13×21×25 cm (200 g); 9.5×19×32 cm (500 g)</span></li>
-                </ul>
-                <details><summary>Details</summary><p>A vegetable-cream spread with excellent flavour and a great alternative to butter. Ideal for sandwiches, as an addition to dairy products and side dishes, and for baking cookies, gingerbread, cakes and bread.</p></details>
-              </div>
-            </article>
-            <article class="mproduct reveal">
-              <div class="mproduct__media"><img src="../images/marg/smaylo-stol-72.jpg" alt="Smaylo &ldquo;For your table&rdquo; 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>fat</small></span></div>
-              <div class="mproduct__body">
-                <h4>Smaylo &ldquo;For your table&rdquo; 72%</h4>
-                <div class="uses"><span>Breakfast</span><span>Desserts</span><span>Samsa and puff pastries</span><span>Hot dishes and sides</span></div>
-                <ul class="product__list">
-                  <li><span>Type</span><span>Vegetable-fat spread</span></li>
-                  <li><span>Packaging</span><span>Parchment brick 500 g</span></li>
-                  <li><span>Per box</span><span>500 g × 20 = 10 kg</span></li>
-                  <li><span>Box size</span><span>13.5×25.5×35.5 cm</span></li>
-                </ul>
-                <details><summary>Details</summary><p>A vegetable-fat spread with excellent flavour. Perfect for sandwiches and as an addition to dairy products and side dishes, for frying vegetables and meat, and for baking cookies, gingerbread, cakes and bakery products.</p></details>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="cat-group" data-cat="pro">
-          <div class="cat-group__head"><h3>Professional · 2.5–20 kg</h3></div>
-          <div class="mgrid">
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/margaritto-82-creamy.jpg" alt="Margaritto &ldquo;Creamy taste&rdquo; 82%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">MARGARITTO</span><span class="mproduct__fat">82%<small>fat</small></span></div>
               <div class="mproduct__body">
@@ -240,6 +223,39 @@
                 <details><summary>Details</summary><p>For yeast dough, shortcrust pastry and various confectionery. Compared with margarine, products come out better and with more volume. Also suitable for deep-frying and chicken dishes.</p></details>
               </div>
             </article>
+          </div>
+        </div>
+        <div class="cat-group" data-cat="smaylo" id="smaylo">
+          <div class="cat-group__head cat-group__head--brand"><h3><img class="brand-logo-smaylo" src="../images/brand/smaylo-logo.png" alt="Smaylo and &ldquo;Slivochny Zavtrak&rdquo;" height="56"></h3><span>Smaylo and &ldquo;Slivochny Zavtrak&rdquo;</span></div>
+          <div class="mgrid">
+            <article class="mproduct reveal">
+              <div class="mproduct__media"><img src="../images/marg/smaylo-spread-82.jpg" alt="Smaylo spread 82.5%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">82.5%<small>fat</small></span></div>
+              <div class="mproduct__body">
+                <h4>Smaylo spread 82.5%</h4>
+                <div class="uses"><span>Breakfast</span><span>Cakes and muffins</span><span>Creams and glazes</span><span>Pasta, porridge and sides</span></div>
+                <ul class="product__list">
+                  <li><span>Type</span><span>Vegetable-cream spread</span></li>
+                  <li><span>Packaging</span><span>Brick pack 200 g / 500 g</span></li>
+                  <li><span>Per box</span><span>200 g × 30 = 6 kg; 500 g × 10 = 5 kg</span></li>
+                  <li><span>Box size</span><span>13×21×25 cm (200 g); 9.5×19×32 cm (500 g)</span></li>
+                </ul>
+                <details><summary>Details</summary><p>A vegetable-cream spread with excellent flavour and a great alternative to butter. Ideal for sandwiches, as an addition to dairy products and side dishes, and for baking cookies, gingerbread, cakes and bread.</p></details>
+              </div>
+            </article>
+            <article class="mproduct reveal">
+              <div class="mproduct__media"><img src="../images/marg/smaylo-stol-72.jpg" alt="Smaylo &ldquo;For your table&rdquo; 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>fat</small></span></div>
+              <div class="mproduct__body">
+                <h4>Smaylo &ldquo;For your table&rdquo; 72%</h4>
+                <div class="uses"><span>Breakfast</span><span>Desserts</span><span>Samsa and puff pastries</span><span>Hot dishes and sides</span></div>
+                <ul class="product__list">
+                  <li><span>Type</span><span>Vegetable-fat spread</span></li>
+                  <li><span>Packaging</span><span>Parchment brick 500 g</span></li>
+                  <li><span>Per box</span><span>500 g × 20 = 10 kg</span></li>
+                  <li><span>Box size</span><span>13.5×25.5×35.5 cm</span></li>
+                </ul>
+                <details><summary>Details</summary><p>A vegetable-fat spread with excellent flavour. Perfect for sandwiches and as an addition to dairy products and side dishes, for frying vegetables and meat, and for baking cookies, gingerbread, cakes and bakery products.</p></details>
+              </div>
+            </article>
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/smaylo-spread-2-5kg.jpg" alt="Smaylo spread 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>fat</small></span></div>
               <div class="mproduct__body">
@@ -297,7 +313,7 @@
 
     <section class="section" style="padding-top:110px">
       <div class="container">
-        <div class="cta dark-zone reveal">
+        <div class="cta theme-zone reveal">
           <div class="aurora" aria-hidden="true"><span></span></div>
           <div class="grain" aria-hidden="true"></div>
           <div>
@@ -327,6 +343,7 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About us</a></li>
+            <li><a href="sertifikatlar.html">Certificates</a></li>
             <li><a href="export.html">Export</a></li>
             <li><a href="karyera.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -337,8 +354,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">BULUT raw materials</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -353,8 +372,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. All rights reserved.</span>

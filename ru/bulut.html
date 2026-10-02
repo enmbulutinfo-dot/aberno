@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BULUT — санитарно-гигиеническая продукция | Aberno Group</title>
   <meta name="description" content="Каталог продукции BULUT: бумажные и влажные салфетки, коробочные салфетки, бумажные полотенца, туалетная бумага и диспенсеры для HoReCa.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Главная"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Основное меню">
-        <a href="about.html" class="nav__link">Компания</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">О нас<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Компания</a>
+            <a href="sertifikatlar.html">Сертификаты</a>
+            <a href="karyera.html">Карьера</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Гигиеническая продукция</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Салфетки и туалетная бумага</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Спреды</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Маргарины</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Премиальное сливочное масло</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Сырьё</a>
         <a href="export.html" class="nav__link">Экспорт</a>
         <a href="contact.html" class="btn btn--primary">Связаться</a>
@@ -43,14 +59,14 @@
   </header>
 
   <main>
-    <section class="page-hero page-hero--split dark-zone">
+    <section class="page-hero page-hero--split theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
       <div class="container">
         <div>
           <div class="breadcrumb"><a href="index.html">Главная</a> / BULUT</div>
-          <h1><img class="emblem emblem--hero emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></h1>
+          <h1><img class="emblem emblem--hero emblem--auto" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></h1>
           <p>Мягкие, как облако. Более 35 видов санитарно-гигиенической продукции для дома, офиса и HoReCa — произведено в Узбекистане и экспортируется на рынки Центральной Азии.</p>
           <div class="page-hero__actions">
             <a href="#mahsulotlar" class="btn btn--primary">Продукция</a>
@@ -60,7 +76,7 @@
         </div>
         <div class="page-hero__art reveal" aria-hidden="true">
           <figure class="float-card" style="position:relative;width:100%;aspect-ratio:1/1;animation:bob 10s ease-in-out infinite">
-            <img src="../images/bulut-brand.jpg" alt="" style="object-position:50% 30%">
+            <img src="../images/xomashyo/bulut-mashina.jpg" alt="" style="object-position:40% 50%">
           </figure>
         </div>
       </div>
@@ -74,7 +90,7 @@
           <p class="lead">Вся продукция из каталога: количество, размер, состав и слойность. У товаров с несколькими дизайнами нажмите на миниатюру, чтобы переключить дизайн.</p>
         </div>
         <div class="filters" role="group" aria-label="Категории">
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Все<span class="filter__count">39</span></button>
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Все<span class="filter__count">35</span></button>
           <button type="button" class="filter" data-filter="napkins" aria-pressed="false">Бумажные салфетки<span class="filter__count">8</span></button>
           <button type="button" class="filter" data-filter="dispenser" aria-pressed="false">Салфетки для диспенсера<span class="filter__count">5</span></button>
           <button type="button" class="filter" data-filter="towels" aria-pressed="false">Бумажные полотенца<span class="filter__count">2</span></button>
@@ -82,7 +98,6 @@
           <button type="button" class="filter" data-filter="box" aria-pressed="false">Коробочные салфетки<span class="filter__count">3</span></button>
           <button type="button" class="filter" data-filter="toilet" aria-pressed="false">Туалетная бумага<span class="filter__count">9</span></button>
           <button type="button" class="filter" data-filter="dispensers" aria-pressed="false">Диспенсеры<span class="filter__count">4</span></button>
-          <button type="button" class="filter" data-filter="pandoozy" aria-pressed="false">PanDoozy<span class="filter__count">4</span></button>
         </div>
 
         <div class="cat-group" data-cat="napkins" id="cat-napkins">
@@ -422,7 +437,7 @@
               </div>
             </article>
             <article class="product">
-              <div class="product__img"><img src="../images/products/hojatxona-6.jpg" alt="Туалетная бумага" loading="lazy"></div>
+              <div class="product__img"><img class="blend" src="../images/products/hojatxona-6.jpg" alt="Туалетная бумага" loading="lazy"></div>
               <div class="product__body">
                 <h4>Туалетная бумага</h4>
                 <ul class="product__list">
@@ -533,56 +548,6 @@
             </article>
           </div>
         </div>
-
-        <div class="cat-group" data-cat="pandoozy" id="cat-pandoozy">
-          <div class="cat-group__head"><h3>PanDoozy</h3><span>4 товара</span></div>
-          <div class="product-grid">
-            <article class="product">
-              <div class="product__img"><img src="../images/products/pandoozy-vtulkasiz-10.jpg" alt="Туалетная бумага PanDoozy без втулки" loading="lazy"></div>
-              <div class="product__body">
-                <h4>Туалетная бумага PanDoozy без втулки</h4>
-                <ul class="product__list">
-                  <li><span>Кол-во</span><span>10 рулонов</span></li>
-                  <li><span>Состав</span><span>100% целлюлоза</span></li>
-                  <li><span>Слой</span><span>6</span></li>
-                </ul>
-              </div>
-            </article>
-            <article class="product">
-              <div class="product__img"><img src="../images/products/pandoozy-vtulkali-10.jpg" alt="Туалетная бумага PanDoozy с втулкой" loading="lazy"></div>
-              <div class="product__body">
-                <h4>Туалетная бумага PanDoozy с втулкой</h4>
-                <ul class="product__list">
-                  <li><span>Кол-во</span><span>10 рулонов</span></li>
-                  <li><span>Состав</span><span>100% целлюлоза</span></li>
-                  <li><span>Слой</span><span>6</span></li>
-                </ul>
-              </div>
-            </article>
-            <article class="product">
-              <div class="product__img"><img src="../images/products/pandoozy-salfetka-345.jpg" alt="Бумажные салфетки PanDoozy в удобной упаковке" loading="lazy"></div>
-              <div class="product__body">
-                <h4>Бумажные салфетки PanDoozy в удобной упаковке</h4>
-                <ul class="product__list">
-                  <li><span>Кол-во</span><span>345 шт.</span></li>
-                  <li><span>Состав</span><span>100% целлюлоза</span></li>
-                  <li><span>Слой</span><span>4</span></li>
-                </ul>
-              </div>
-            </article>
-            <article class="product">
-              <div class="product__img"><img src="../images/products/pandoozy-salfetka-70.jpg" alt="Бумажные салфетки PanDoozy в удобной упаковке" loading="lazy"></div>
-              <div class="product__body">
-                <h4>Бумажные салфетки PanDoozy в удобной упаковке</h4>
-                <ul class="product__list">
-                  <li><span>Кол-во</span><span>70 шт.</span></li>
-                  <li><span>Состав</span><span>100% целлюлоза</span></li>
-                  <li><span>Слой</span><span>6</span></li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -642,7 +607,7 @@
 
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="cta dark-zone reveal">
+        <div class="cta theme-zone reveal">
           <div class="aurora" aria-hidden="true"><span></span></div>
           <div class="grain" aria-hidden="true"></div>
           <div>
@@ -675,6 +640,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
+            <li><a href="sertifikatlar.html">Сертификаты</a></li>
             <li><a href="export.html">Экспорт</a></li>
             <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -685,8 +651,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">Сырьё BULUT</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -701,8 +669,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>

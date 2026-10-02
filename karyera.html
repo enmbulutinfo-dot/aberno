@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karyera — Aberno Group</title>
   <meta name="description" content="Aberno Group'da ishlash: ochiq vakansiyalar va HR bo'limi bilan aloqa. Gigiena mahsulotlari, qog'oz va margarin ishlab chiqarish.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Bosh sahifa"><img class="logo__mark" src="images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Asosiy menyu">
-        <a href="about.html" class="nav__link">Kompaniya</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Biz haqimizda<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Kompaniya</a>
+            <a href="sertifikatlar.html">Sertifikatlar</a>
+            <a href="karyera.html">Karyera</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Mahsulotlarimiz<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="images/bulut-logo.png" alt=""><span>BULUT<small>Gigiena mahsulotlari</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Salfetka va hojatxona qog'ozi</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Spredlar</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Margarinlar</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Premium sariyog'</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Xomashyo</a>
         <a href="export.html" class="nav__link">Eksport</a>
         <a href="contact.html" class="btn btn--primary">Bog'lanish</a>
@@ -43,7 +59,7 @@
   </header>
 
   <main>
-    <section class="page-hero dark-zone">
+    <section class="page-hero theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
@@ -101,7 +117,7 @@
 
     <section class="section">
       <div class="container">
-        <div class="cta dark-zone reveal">
+        <div class="cta theme-zone reveal">
           <div class="aurora" aria-hidden="true"><span></span></div>
           <div class="grain" aria-hidden="true"></div>
           <div>
@@ -131,6 +147,7 @@
           <h4>Kompaniya</h4>
           <ul>
             <li><a href="about.html">Biz haqimizda</a></li>
+            <li><a href="sertifikatlar.html">Sertifikatlar</a></li>
             <li><a href="export.html">Eksport</a></li>
             <li><a href="karyera.html">Karyera</a></li>
             <li><a href="contact.html">Aloqa</a></li>
@@ -141,8 +158,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">BULUT xomashyosi</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -157,8 +176,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Barcha huquqlar himoyalangan.</span>

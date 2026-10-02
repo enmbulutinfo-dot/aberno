@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MARGARITTO и SMAYLO — маргарин и спреды | Aberno Group</title>
   <meta name="description" content="Маргарины Margaritto и спреды Smaylo: фасовка для дома 200–500 г и профессиональная 2,5–20 кг. Слоёное тесто, кремы, универсальный маргарин и жир растительный топлёный 99%.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Главная"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Основное меню">
-        <a href="about.html" class="nav__link">Компания</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">О нас<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Компания</a>
+            <a href="sertifikatlar.html">Сертификаты</a>
+            <a href="karyera.html">Карьера</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Гигиеническая продукция</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Салфетки и туалетная бумага</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Спреды</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Маргарины</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Премиальное сливочное масло</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Сырьё</a>
         <a href="export.html" class="nav__link">Экспорт</a>
         <a href="contact.html" class="btn btn--primary">Связаться</a>
@@ -43,7 +59,7 @@
   </header>
 
   <main>
-    <section class="page-hero page-hero--split dark-zone">
+    <section class="page-hero page-hero--split theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
@@ -52,7 +68,7 @@
           <div class="breadcrumb"><a href="index.html">Главная</a> / Margaritto &amp; Smaylo</div>
           <div class="page-hero__logos">
             <img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805">
-            <img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508" style="height:60px">
+            <img class="emblem--auto" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508" style="height:60px">
           </div>
           <h1>Кулинария — <span class="gold-text">это искусство</span></h1>
           <p>Маргарин, спреды и жир растительный топлёный для хозяек, пекарен и кондитерских цехов. Фасовка для дома 200–500 г и профессиональная 2,5–20 кг.</p>
@@ -63,7 +79,7 @@
         </div>
         <div class="page-hero__art reveal" aria-hidden="true">
           <figure class="float-card" style="position:relative;width:100%;aspect-ratio:1/1;animation:bob 10s ease-in-out infinite">
-            <img src="../images/marg/marg-katalog-muqova.jpg" alt="">
+            <img src="../images/marg/margaritto-pastry-80.jpg" alt="">
           </figure>
         </div>
       </div>
@@ -89,11 +105,11 @@
         </div>
         <div class="filters" role="group" aria-label="Группы">
           <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Все<span class="filter__count">12</span></button>
-          <button type="button" class="filter" data-filter="retail" aria-pressed="false">Для дома · 200–500 г<span class="filter__count">4</span></button>
-          <button type="button" class="filter" data-filter="pro" aria-pressed="false">Профессиональная · 2,5–20 кг<span class="filter__count">8</span></button>
+          <button type="button" class="filter" data-filter="margaritto" aria-pressed="false">Margaritto<span class="filter__count">8</span></button>
+          <button type="button" class="filter" data-filter="smaylo" aria-pressed="false">Smaylo и «Сливочный завтрак»<span class="filter__count">4</span></button>
         </div>
-        <div class="cat-group" data-cat="retail">
-          <div class="cat-group__head"><h3>Для дома · 200–500 г</h3></div>
+        <div class="cat-group" data-cat="margaritto" id="margaritto">
+          <div class="cat-group__head cat-group__head--brand"><h3><img class="brand-logo-margaritto" src="../images/brand/margaritto-logo.png" alt="Margaritto" height="56"></h3><span>Margaritto</span></div>
           <div class="mgrid">
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/margaritto-universal-80.jpg" alt="Margaritto Universal 80%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">MARGARITTO</span><span class="mproduct__fat">80%<small>жирн.</small></span></div>
@@ -123,39 +139,6 @@
                 <details><summary>Подробнее</summary><p>Специально разработан для изделий из слоёного теста, в основном используется хозяйками. Обеспечивает чёткое разделение слоёв и хороший объём. Для других кондитерских изделий не рекомендуется.</p></details>
               </div>
             </article>
-            <article class="mproduct reveal">
-              <div class="mproduct__media"><img src="../images/marg/smaylo-spread-82.jpg" alt="Спред Smaylo 82,5%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">82,5%<small>жирн.</small></span></div>
-              <div class="mproduct__body">
-                <h4>Спред Smaylo 82,5%</h4>
-                <div class="uses"><span>Завтрак</span><span>Кексы и маффины</span><span>Кремы и глазури</span><span>Макароны, каши и гарниры</span></div>
-                <ul class="product__list">
-                  <li><span>Тип</span><span>Спред растительно-сливочный</span></li>
-                  <li><span>Упаковка</span><span>Брикет 200 г / 500 г</span></li>
-                  <li><span>В коробке</span><span>200 г × 30 = 6 кг; 500 г × 10 = 5 кг</span></li>
-                  <li><span>Размер коробки</span><span>13×21×25 см (200 г); 9,5×19×32 см (500 г)</span></li>
-                </ul>
-                <details><summary>Подробнее</summary><p>Растительно-сливочный спред с отличными вкусовыми качествами — прекрасная альтернатива сливочному маслу. Идеален для бутербродов, как добавка к молочным продуктам и гарнирам, для выпечки печенья, пряников, кексов и хлебобулочных изделий.</p></details>
-              </div>
-            </article>
-            <article class="mproduct reveal">
-              <div class="mproduct__media"><img src="../images/marg/smaylo-stol-72.jpg" alt="Smaylo «Для вашего стола» 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>жирн.</small></span></div>
-              <div class="mproduct__body">
-                <h4>Smaylo «Для вашего стола» 72%</h4>
-                <div class="uses"><span>Завтрак</span><span>Десерты</span><span>Самса и слоёная выпечка</span><span>Горячие блюда и гарниры</span></div>
-                <ul class="product__list">
-                  <li><span>Тип</span><span>Спред растительно-жировой</span></li>
-                  <li><span>Упаковка</span><span>Пергаментный брикет 500 г</span></li>
-                  <li><span>В коробке</span><span>500 г × 20 = 10 кг</span></li>
-                  <li><span>Размер коробки</span><span>13,5×25,5×35,5 см</span></li>
-                </ul>
-                <details><summary>Подробнее</summary><p>Растительно-жировой спред с отличными вкусовыми качествами. Идеален для бутербродов, подходит как добавка к молочным продуктам и гарнирам, для жарки овощей и мяса, выпечки мучных кондитерских изделий (печенье, пряники, кексы) и хлебобулочных изделий.</p></details>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="cat-group" data-cat="pro">
-          <div class="cat-group__head"><h3>Профессиональная · 2,5–20 кг</h3></div>
-          <div class="mgrid">
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/margaritto-82-creamy.jpg" alt="Margaritto «Сливочный вкус» 82%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">MARGARITTO</span><span class="mproduct__fat">82%<small>жирн.</small></span></div>
               <div class="mproduct__body">
@@ -240,6 +223,39 @@
                 <details><summary>Подробнее</summary><p>Для дрожжевого и песочного теста и различных кондитерских изделий. По сравнению с маргарином изделия получаются качественнее и объёмнее. Подходит для фритюра и приготовления блюд из курицы.</p></details>
               </div>
             </article>
+          </div>
+        </div>
+        <div class="cat-group" data-cat="smaylo" id="smaylo">
+          <div class="cat-group__head cat-group__head--brand"><h3><img class="brand-logo-smaylo" src="../images/brand/smaylo-logo.png" alt="Smaylo и «Сливочный завтрак»" height="56"></h3><span>Smaylo и «Сливочный завтрак»</span></div>
+          <div class="mgrid">
+            <article class="mproduct reveal">
+              <div class="mproduct__media"><img src="../images/marg/smaylo-spread-82.jpg" alt="Спред Smaylo 82,5%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">82,5%<small>жирн.</small></span></div>
+              <div class="mproduct__body">
+                <h4>Спред Smaylo 82,5%</h4>
+                <div class="uses"><span>Завтрак</span><span>Кексы и маффины</span><span>Кремы и глазури</span><span>Макароны, каши и гарниры</span></div>
+                <ul class="product__list">
+                  <li><span>Тип</span><span>Спред растительно-сливочный</span></li>
+                  <li><span>Упаковка</span><span>Брикет 200 г / 500 г</span></li>
+                  <li><span>В коробке</span><span>200 г × 30 = 6 кг; 500 г × 10 = 5 кг</span></li>
+                  <li><span>Размер коробки</span><span>13×21×25 см (200 г); 9,5×19×32 см (500 г)</span></li>
+                </ul>
+                <details><summary>Подробнее</summary><p>Растительно-сливочный спред с отличными вкусовыми качествами — прекрасная альтернатива сливочному маслу. Идеален для бутербродов, как добавка к молочным продуктам и гарнирам, для выпечки печенья, пряников, кексов и хлебобулочных изделий.</p></details>
+              </div>
+            </article>
+            <article class="mproduct reveal">
+              <div class="mproduct__media"><img src="../images/marg/smaylo-stol-72.jpg" alt="Smaylo «Для вашего стола» 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>жирн.</small></span></div>
+              <div class="mproduct__body">
+                <h4>Smaylo «Для вашего стола» 72%</h4>
+                <div class="uses"><span>Завтрак</span><span>Десерты</span><span>Самса и слоёная выпечка</span><span>Горячие блюда и гарниры</span></div>
+                <ul class="product__list">
+                  <li><span>Тип</span><span>Спред растительно-жировой</span></li>
+                  <li><span>Упаковка</span><span>Пергаментный брикет 500 г</span></li>
+                  <li><span>В коробке</span><span>500 г × 20 = 10 кг</span></li>
+                  <li><span>Размер коробки</span><span>13,5×25,5×35,5 см</span></li>
+                </ul>
+                <details><summary>Подробнее</summary><p>Растительно-жировой спред с отличными вкусовыми качествами. Идеален для бутербродов, подходит как добавка к молочным продуктам и гарнирам, для жарки овощей и мяса, выпечки мучных кондитерских изделий (печенье, пряники, кексы) и хлебобулочных изделий.</p></details>
+              </div>
+            </article>
             <article class="mproduct reveal">
               <div class="mproduct__media"><img src="../images/marg/smaylo-spread-2-5kg.jpg" alt="Спред Smaylo 72%" loading="lazy" width="1200" height="1200"><span class="mproduct__brand">SMAYLO</span><span class="mproduct__fat">72%<small>жирн.</small></span></div>
               <div class="mproduct__body">
@@ -297,7 +313,7 @@
 
     <section class="section" style="padding-top:110px">
       <div class="container">
-        <div class="cta dark-zone reveal">
+        <div class="cta theme-zone reveal">
           <div class="aurora" aria-hidden="true"><span></span></div>
           <div class="grain" aria-hidden="true"></div>
           <div>
@@ -327,6 +343,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
+            <li><a href="sertifikatlar.html">Сертификаты</a></li>
             <li><a href="export.html">Экспорт</a></li>
             <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -337,8 +354,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">Сырьё BULUT</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -353,8 +372,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>

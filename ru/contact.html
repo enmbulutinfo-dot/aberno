@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакты — Aberno Group</title>
   <meta name="description" content="Свяжитесь с Aberno Group: сотрудничество, оптовые закупки, сырьё и экспорт.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Главная"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Основное меню">
-        <a href="about.html" class="nav__link">Компания</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">О нас<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Компания</a>
+            <a href="sertifikatlar.html">Сертификаты</a>
+            <a href="karyera.html">Карьера</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Гигиеническая продукция</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Салфетки и туалетная бумага</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Спреды</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Маргарины</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Премиальное сливочное масло</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Сырьё</a>
         <a href="export.html" class="nav__link">Экспорт</a>
         <a href="contact.html" class="btn btn--primary">Связаться</a>
@@ -43,7 +59,7 @@
   </header>
 
   <main>
-    <section class="page-hero dark-zone">
+    <section class="page-hero theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
@@ -129,6 +145,27 @@
         </form>
       </div>
     </section>
+    <section class="section section--soft" id="manzil">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Адрес</span>
+          <h2>Как нас найти</h2>
+        </div>
+        <div class="locmap reveal">
+          <div class="locmap__info">
+            <h3>Aberno Group</h3>
+            <div class="locmap__row"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Адрес</strong><span>г. Ташкент, Яшнабадский район, ул. Уйсозлар, 72</span></div></div>
+            <div class="locmap__row"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><strong>Телефон</strong><a href="tel:+998953427070">+998 95 342-70-70</a><br><a href="tel:+998712300900">+998 71 230-09-00</a></div></div>
+            <div class="locmap__row"><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Режим работы</strong><span>Понедельник – суббота, 09:00 – 18:00</span></div></div>
+            <div class="locmap__actions">
+              <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=41.2611913,69.3458868" target="_blank" rel="noopener">Открыть в Google Maps</a>
+              <a class="btn btn--outline" href="https://yandex.uz/maps/?pt=69.3458868,41.2611913&amp;z=17&amp;l=map" target="_blank" rel="noopener">На Яндекс Картах</a>
+            </div>
+          </div>
+          <div class="locmap__frame"><iframe src="https://maps.google.com/maps?q=41.2611913,69.3458868&amp;z=16&amp;hl=ru&amp;output=embed" title="Расположение Aberno Group на карте" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer dark-zone">
@@ -148,6 +185,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
+            <li><a href="sertifikatlar.html">Сертификаты</a></li>
             <li><a href="export.html">Экспорт</a></li>
             <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -158,8 +196,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">Сырьё BULUT</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -174,8 +214,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>

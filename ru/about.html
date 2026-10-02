@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>О компании — Aberno Group</title>
   <meta name="description" content="Aberno Group основана в 2021 году. Более 150 сотрудников, мощность 1000 т маргарина в месяц, ISO 22000 и HACCP. Бренды BULUT, MARGARITTO и SMAYLO.">
-  <meta name="theme-color" content="#0b1a2e">
+  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,24 @@
     <div class="container header__inner">
       <a href="index.html" class="logo" aria-label="Aberno Group — Главная"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
       <nav class="nav" aria-label="Основное меню">
-        <a href="about.html" class="nav__link">Компания</a>
-        <a href="bulut.html" class="nav__link nav__link--brand"><img class="emblem emblem--nav emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html" class="nav__link">Margaritto &amp; Smaylo</a>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">О нас<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub">
+            <a href="about.html">Компания</a>
+            <a href="sertifikatlar.html">Сертификаты</a>
+            <a href="karyera.html">Карьера</a>
+          </div>
+        </div>
+        <div class="nav__item">
+          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+          <div class="nav__sub nav__sub--brands">
+            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Гигиеническая продукция</small></span></a>
+            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Салфетки и туалетная бумага</small></span></a>
+            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Спреды</small></span></a>
+            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Маргарины</small></span></a>
+            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Премиальное сливочное масло</small></span></a>
+          </div>
+        </div>
         <a href="xomashyo.html" class="nav__link">Сырьё</a>
         <a href="export.html" class="nav__link">Экспорт</a>
         <a href="contact.html" class="btn btn--primary">Связаться</a>
@@ -43,7 +59,7 @@
   </header>
 
   <main>
-    <section class="page-hero dark-zone">
+    <section class="page-hero theme-zone">
       <div class="aurora" aria-hidden="true"><span></span></div>
       <div class="lines" aria-hidden="true"></div>
       <div class="grain" aria-hidden="true"></div>
@@ -121,6 +137,28 @@
       </div>
     </section>
 
+    <section class="section" id="rejalar">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Планы</span>
+          <h2>Смотрим в будущее</h2>
+        </div>
+        <div class="grid-4">
+          <div class="card reveal"><span class="card__num">01</span><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg></div><h3>Новые продукты</h3><p>Запуск производства сгущённого молока и топлёного масла (ГХИ).</p></div>
+          <div class="card reveal"><span class="card__num">02</span><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3>Рынок Китая</h3><p>Выход на рынок Китая со сливочным маслом.</p></div>
+          <div class="card reveal"><span class="card__num">03</span><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3>Монголия и Азербайджан</h3><p>Экспорт маргариновой продукции.</p></div>
+          <div class="card reveal"><span class="card__num">04</span><div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m23 6-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></div><h3>Арабские страны и Афганистан</h3><p>Экспорт спредовой продукции.</p></div>
+        </div>
+        <div class="section__head section__head--center reveal" style="margin:90px auto 40px">
+          <span class="eyebrow">Оборудование</span>
+          <h2>Современные технологии</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal"><h3>Alfa-SBT</h3><p>На производстве используются новейшие технологии 2021–2022 годов компании Alfa-SBT.</p></div>
+          <div class="card reveal"><h3>FASA AB · Литва</h3><p>Европейское фасовочное оборудование (2022).</p></div>
+        </div>
+      </div>
+    </section>
     <section class="section section--soft">
       <div class="container">
         <div class="section__head section__head--center reveal">
@@ -133,6 +171,7 @@
           <div class="cert reveal reveal-delay-2"><div class="cert__seal">HALAL</div><h4>Сертификат Халяль</h4><p>World Halal Trust</p></div>
           <div class="cert reveal reveal-delay-3"><div class="cert__seal">UZ</div><h4>Сертификат соответствия</h4><p>Национальная система сертификации и санитарно-эпидемиологическое заключение</p></div>
         </div>
+        <p style="text-align:center;margin-top:34px"><a class="btn btn--primary" href="sertifikatlar.html">Все сертификаты</a></p>
       </div>
     </section>
 
@@ -143,18 +182,18 @@
           <h2>Этапы развития</h2>
         </div>
         <div class="timeline">
-          <div class="timeline__item reveal"><div class="timeline__dot">2021</div><h3>Основание компании</h3><p>Aberno начала работу как производственная компания в Узбекистане.</p></div>
-          <div class="timeline__item reveal"><div class="timeline__dot">B</div><h3><img class="emblem emblem--h3 emblem--auto" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></h3><p>Выпуск салфеток, бумажных полотенец, туалетной бумаги и другой гигиенической продукции, а также бумаги-основы.</p></div>
-          <div class="timeline__item reveal"><div class="timeline__dot">M</div><h3>MARGARITTO и SMAYLO</h3><p>Запущено производство маргарина, спредов и жира растительного топлёного.</p></div>
-          <div class="timeline__item reveal"><div class="timeline__dot">ISO</div><h3>ISO 22000 и HACCP</h3><p>Система безопасности пищевой продукции сертифицирована по международным стандартам.</p></div>
-          <div class="timeline__item reveal"><div class="timeline__dot">→</div><h3>Экспорт в Центральную Азию</h3><p>Бренд BULUT активно развивает экспорт на рынки соседних стран.</p></div>
+          <div class="timeline__item reveal"><div class="timeline__dot">2021</div><h3>Основание компании</h3><p>Создана Aberno Butters Group. На строительство и запуск масложирового завода ушло 18 месяцев и более  000 000 инвестиций.</p></div>
+          <div class="timeline__item reveal"><div class="timeline__dot">2022</div><h3>Начало производства</h3><p>Начат выпуск маргаринов и спредов для внутреннего рынка Узбекистана.</p></div>
+          <div class="timeline__item reveal"><div class="timeline__dot">2023</div><h3>Первый экспорт</h3><p>Заключены первые экспортные сделки с Туркменистаном и Таджикистаном.</p></div>
+          <div class="timeline__item reveal"><div class="timeline__dot">2025</div><h3><img class="emblem emblem--h3 emblem--auto" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></h3><p>Зарегистрирован товарный знак BULUT. Выпускаются гигиеническая продукция и бумага-основа.</p></div>
+          <div class="timeline__item reveal"><div class="timeline__dot">2026</div><h3>ISO 22000 и HACCP</h3><p>Система безопасности пищевой продукции сертифицирована по международным стандартам.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="cta dark-zone reveal">
+        <div class="cta theme-zone reveal">
           <div class="aurora" aria-hidden="true"><span></span></div>
           <div class="grain" aria-hidden="true"></div>
           <div>
@@ -184,6 +223,7 @@
           <h4>Компания</h4>
           <ul>
             <li><a href="about.html">О компании</a></li>
+            <li><a href="sertifikatlar.html">Сертификаты</a></li>
             <li><a href="export.html">Экспорт</a></li>
             <li><a href="karyera.html">Карьера</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -194,8 +234,10 @@
           <ul>
             <li><a href="bulut.html">BULUT</a></li>
             <li><a href="xomashyo.html">Сырьё BULUT</a></li>
-            <li><a href="margarin.html">MARGARITTO</a></li>
-            <li><a href="margarin.html">SMAYLO</a></li>
+            <li><a href="pandoozy.html">PanDoozy</a></li>
+            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
+            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
+            <li><a href="valmond.html">VALMOND</a></li>
           </ul>
         </div>
         <div>
@@ -210,8 +252,8 @@
       </div>
       <div class="footer__brands">
         <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
+        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
+        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
       </div>
       <div class="footer__bottom">
         <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>

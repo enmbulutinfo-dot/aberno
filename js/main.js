@@ -47,8 +47,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Joriy sahifani menyuda belgilash
   const current = location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav__link").forEach((link) => {
-    if (link.getAttribute("href") === current) link.classList.add("is-active");
+  document.querySelectorAll(".nav a").forEach((link) => {
+    const href = (link.getAttribute("href") || "").split("#")[0];
+    if (href !== current) return;
+    link.classList.add("is-active");
+    const item = link.closest(".nav__item");
+    if (item) item.querySelector(".nav__toggle").classList.add("is-active");
+  });
+
+  // Ochiluvchi menyular (bosilganda / telefonda)
+  const navItems = document.querySelectorAll(".nav__item");
+  navItems.forEach((item) => {
+    const btn = item.querySelector(".nav__toggle");
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const open = !item.classList.contains("is-open");
+      navItems.forEach((o) => { o.classList.remove("is-open"); o.querySelector(".nav__toggle").setAttribute("aria-expanded", "false"); });
+      item.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open);
+    });
+  });
+  document.addEventListener("click", (e) => {
+    navItems.forEach((o) => {
+      if (!o.contains(e.target)) { o.classList.remove("is-open"); o.querySelector(".nav__toggle").setAttribute("aria-expanded", "false"); }
+    });
   });
 
   // Header soyasi
@@ -166,6 +188,15 @@ document.addEventListener("DOMContentLoaded", () => {
       groups.forEach((g) => (g.hidden = cat !== "all" && g.dataset.cat !== cat));
     })
   );
+
+  // Havoladagi #brend (masalan #margaritto) tegishli filtrni yoqadi
+  const applyHashFilter = () => {
+    const key = location.hash.slice(1);
+    const btn = key && document.querySelector(`.filter[data-filter="${key}"]`);
+    if (btn) btn.click();
+  };
+  applyHashFilter();
+  window.addEventListener("hashchange", applyHashFilter);
 
   // Mahsulot dizayn variantlari
   document.querySelectorAll(".product__variants").forEach((wrap) => {
