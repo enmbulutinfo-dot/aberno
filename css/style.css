@@ -608,6 +608,9 @@ p { margin: 0 0 1em; }
 .cta p { color: var(--zone-muted); margin: 0; }
 .cta h2 { margin-bottom: 10px; }
 .cta__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta .cta__contacts { margin-top: 14px; font-size: .92rem; font-weight: 600; line-height: 1.8; }
+.cta__contacts a { color: var(--gold); white-space: nowrap; }
+.cta__contacts a:hover { text-decoration: underline; }
 
 /* ===== Aloqa ===== */
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; }
@@ -656,6 +659,11 @@ p { margin: 0 0 1em; }
 .footer ul { list-style: none; padding: 0; margin: 0; }
 .footer li { margin-bottom: 12px; }
 .footer a:hover { color: var(--gold-2); }
+.footer li.footer__tel-group { margin: 18px 0 8px; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-2); }
+.footer li.footer__tel-group:first-child { margin-top: 0; }
+.tel-group { display: block; margin: 12px 0 2px; font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
+.tel-group:first-child { margin-top: 2px; }
+.footer a[href^="tel:"], .footer a[href^="mailto:"], .contact-item a[href^="tel:"], .locmap__row a[href^="tel:"] { white-space: nowrap; }
 .footer__brands { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 20px; }
 .footer__brands img { height: 34px; width: auto; opacity: .85; transition: opacity .2s; }
 .footer__brands a:hover img { opacity: 1; }
@@ -802,6 +810,7 @@ body.no-scroll { overflow: hidden; }
 .legal li { margin-bottom: 8px; }
 .legal__meta { color: var(--muted); font-size: .9rem; }
 .consent { font-size: .8rem; color: var(--muted); margin: 12px 0 0; }
+.form__send-error { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; font-size: .88rem; font-weight: 600; color: #b3261e; background: rgba(179, 38, 30, .08); border: 1px solid rgba(179, 38, 30, .25); }
 .consent a { color: var(--gold); text-decoration: underline; }
 
 /* ===== BULUT emblemasi ===== */

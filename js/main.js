@@ -140,10 +140,56 @@ document.addEventListener("DOMContentLoaded", () => {
     c.addEventListener("mouseenter", show);
   });
 
+  // Formalar -> Telegram guruhi (Cloudflare Worker orqali, .claude/build/telegram-worker.js).
+  // Manzil bo'sh bo'lsa, forma hech qayerga yubormaydi va faqat tasdiqni ko'rsatadi.
+  const FORM_ENDPOINT = "";
+  const formTexts = {
+    uz: { sending: "Yuborilmoqda...", error: "Xabar yuborilmadi. Qayta urinib ko'ring yoki qo'ng'iroq qiling: +998 71 230-09-00" },
+    ru: { sending: "Отправка...", error: "Сообщение не отправлено. Попробуйте ещё раз или позвоните: +998 71 230-09-00" },
+    en: { sending: "Sending...", error: "The message was not sent. Please try again or call +998 71 230-09-00" },
+  };
+  const ft = formTexts[root.lang] || formTexts.uz;
+  const addTrap = (f) => {
+    const trap = document.createElement("input");
+    trap.type = "text"; trap.name = "website"; trap.tabIndex = -1; trap.autocomplete = "off";
+    trap.setAttribute("aria-hidden", "true");
+    trap.style.cssText = "position:absolute;left:-9999px;width:1px;height:1px;opacity:0";
+    f.appendChild(trap);
+  };
+  const sendForm = async (f, title, fields) => {
+    if (!FORM_ENDPOINT) return true;
+    const btn = f.querySelector('[type="submit"]');
+    const label = btn.textContent;
+    let msg = f.querySelector(".form__send-error");
+    if (msg) msg.remove();
+    btn.disabled = true;
+    btn.textContent = ft.sending;
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ form: `${title} · ${(root.lang || "uz").toUpperCase()}`, page: location.href, website: f.querySelector('[name="website"]').value, fields }),
+      });
+      if (!res.ok) throw new Error(res.status);
+      return true;
+    } catch (err) {
+      msg = document.createElement("p");
+      msg.className = "form__send-error";
+      msg.setAttribute("role", "alert");
+      msg.textContent = ft.error;
+      btn.after(msg);
+      return false;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = label;
+    }
+  };
+
   // Aloqa formasi
   const form = document.querySelector("#contact-form");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    addTrap(form);
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       let valid = true;
       form.querySelectorAll("[required]").forEach((input) => {
@@ -155,7 +201,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!ok) valid = false;
       });
       if (!valid) return;
-      // TODO: backend yoki Telegram bot ulanganda so'rovni shu yerdan yuborish
+      const fields = [...form.querySelectorAll(".field")].map((field) => {
+        const control = field.querySelector("input, select, textarea");
+        return { label: field.querySelector("label").textContent.replace("*", "").trim(), value: control.value.trim() };
+      }).filter((x) => x.value);
+      if (!(await sendForm(form, "Aloqa formasi", fields))) return;
       form.reset();
       form.querySelector(".form__success").classList.add("is-visible");
     });
@@ -250,7 +300,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   const quote = document.querySelector("#quote-form");
   if (quote) {
-    quote.addEventListener("submit", (e) => {
+    addTrap(quote);
+    quote.addEventListener("submit", async (e) => {
       e.preventDefault();
       let valid = true;
       quote.querySelectorAll("[required]").forEach((input) => {
@@ -263,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!valid) return;
       const list = quote.querySelector(".quote-result ul");
       list.innerHTML = "";
+      const fields = [];
       quote.querySelectorAll("[data-summary]").forEach((group) => {
         const label = group.dataset.summary;
         let value = "";
@@ -271,10 +323,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (checked) value = checked.value;
         else if (control) value = control.value + (control.dataset.unit || "");
         if (!value) return;
+        fields.push({ label, value });
         const li = document.createElement("li");
         li.textContent = `${label}: ${value}`;
         list.appendChild(li);
       });
+      if (!(await sendForm(quote, "Xomashyo narx so'rovi", fields))) return;
       quote.querySelector(".quote-result").classList.add("is-visible");
     });
     quote.querySelectorAll("input, select, textarea").forEach((input) =>
