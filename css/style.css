@@ -667,6 +667,8 @@ p { margin: 0 0 1em; }
 .footer__brands { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 20px; }
 .footer__brands img { height: 34px; width: auto; opacity: .85; transition: opacity .2s; }
 .footer__brands a:hover img { opacity: 1; }
+.footer__brands .footer__valmond { font-family: var(--serif); font-weight: 700; font-size: 1.55rem; line-height: 34px; letter-spacing: .03em; color: #fff; opacity: .85; transition: opacity .2s; }
+.footer__brands .footer__valmond:hover { opacity: 1; color: var(--gold-2); }
 .footer__bottom { margin-top: 60px; padding-top: 26px; border-top: 1px solid rgba(226,184,114,.15); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: .85rem; }
 
 /* ===== Hujjatlar (sertifikatlar) ===== */
