@@ -412,6 +412,9 @@ p { margin: 0 0 1em; }
 .brand-card.brand-card--top { background: #0b1a2e; }
 .brand-card.brand-card--top > img.brand-card__bg { bottom: auto; height: 62%; object-position: 50% 100%; }
 .brand-card.brand-card--top::before { background: linear-gradient(180deg, transparent 0%, transparent 42%, rgba(11,26,46,.85) 56%, #0b1a2e 63%); }
+/* Rasm ustidagi logotip ko'rinsin: to'q shaffof plashka */
+.brand-card__badge { align-self: flex-start; display: inline-flex; margin-bottom: 18px; padding: 10px 16px; border-radius: 16px; background: rgba(11, 26, 46, .78); border: 1px solid rgba(226, 184, 114, .25); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0, 0, 0, .3); }
+.brand-card__badge .brand-card__logo { height: 54px; margin-bottom: 0; }
 .brand-card.brand-card--pack > img.brand-card__bg { object-fit: contain; padding: 22px 22px 0; background: #f2f7fd; }
 .brand-card.brand-card--pack { background: linear-gradient(180deg, #f2f7fd 0%, #f2f7fd 50%, #0b1a2e 63%); }
 .brand-card--valmond { background: radial-gradient(circle at 75% 25%, rgba(213,163,91,.38), transparent 60%), linear-gradient(160deg, #15305a, #07111f); }
@@ -979,6 +982,11 @@ body.no-scroll { overflow: hidden; }
 .bot__chip { padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line-gold); background: transparent; color: var(--heading); font: 600 .84rem var(--sans); cursor: pointer; transition: background .2s, border-color .2s; }
 .bot__chip:hover { background: var(--gold-soft); border-color: var(--gold); }
 .bot__chip--home { color: var(--muted); border-style: dashed; }
+.bot__ask { display: flex; gap: 8px; padding: 0 16px 16px; background: var(--surface); }
+.bot__ask input { flex: 1; min-width: 0; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line-gold); background: var(--bg); color: var(--text); font: 500 .9rem var(--sans); }
+.bot__ask input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.bot__ask button { flex-shrink: 0; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer; display: grid; place-items: center; background: linear-gradient(135deg, #e2b872, #c9964f 55%, #a8742c); color: #1a1206; }
+.bot__ask button svg { width: 18px; height: 18px; }
 @media (max-width: 600px) {
   .bot { right: 16px; bottom: 16px; }
   .bot__fab { width: 54px; height: 54px; }

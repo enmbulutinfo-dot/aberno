@@ -77,8 +77,40 @@
     },
   };
 
+  // Yozilgan savolni kalit so'zlar bo'yicha tayyor javobga bog'lash (uchala til birga)
+  const KEYWORDS = [
+    ["raw", ["xomashyo", "asos qog", "rulon", "zichlik", "g/m", "gramm", "sellyuloza", "сырь", "основ", "рулон", "целлюлоз", "граммаж", "плотност", "base paper", "raw", "parent roll", "gsm", "jumbo"]],
+    ["private", ["private", "label", "o'z brend", "свой бренд", "собственн", "под брендом", "стм", "own brand"]],
+    ["export", ["eksport", "экспорт", "export", "chet el", "за рубеж", "afg'on", "афган", "qozoq", "казах", "kazakh", "qirg'iz", "кыргыз", "kyrgyz", "tojik", "таджик", "tajik", "turkman", "туркмен", "turkmen"]],
+    ["contact", ["manzil", "qayer", "адрес", "где вы", "где наход", "address", "where", "ish vaqt", "soat", "график", "час", "hours", "xarita", "карт", "map", "lokats", "локац", "location"]],
+    ["career", ["vakans", "ish joy", "ishga", "karyer", "rezyume", "ваканс", "работ", "резюме", "карьер", "job", "career", "vacanc", "cv", "hire"]],
+    ["wholesale", ["narx", "ulgurji", "opt", "цена", "цены", "стоимост", "сколько", "прайс", "price", "cost", "wholesale", "sotib", "купить", "buy", "qancha", "chegirma", "скидк", "discount", "dilerlik", "distrib", "дистриб", "дилер", "dealer"]],
+    ["valmond", ["valmond", "sariyog", "сливочн", "butter"]],
+    ["marg", ["margarin", "margaritto", "smaylo", "spred", "маргарин", "спред", "смайло", "qandolat", "кондит", "пекар", "nonvoy", "bakery", "pastry"]],
+    ["pandoozy", ["pandoozy", "пандуз", "panda"]],
+    ["bulut", ["bulut", "салфет", "salfet", "sochiq", "полотен", "towel", "napkin", "hojatxona", "туалет", "toilet", "nam salfet", "влажн", "wipe", "dispenser", "диспенсер", "gigiena", "гигиен", "hygiene"]],
+    ["operator", ["operator", "оператор", "telefon", "raqam", "номер", "телефон", "phone", "call", "qo'ng'iroq", "звон", "telegram", "email", "pochta", "почт", "mail", "bog'lan", "связ", "contact"]],
+    ["products", ["mahsulot", "продукц", "товар", "product", "assortiment", "ассортимент", "brend", "бренд", "brand", "katalog", "каталог", "catalog"]],
+  ];
+  const findNode = (q) => {
+    const s = " " + q.toLowerCase().replace(/[ʻʼ’‘`´]/g, "'") + " ";
+    let best = null, score = 0;
+    KEYWORDS.forEach(([id, words]) => {
+      const n = words.filter((w) => s.includes(w)).length;
+      if (n > score) { best = id; score = n; }
+    });
+    return best;
+  };
+  const ASK = {
+    uz: { ph: "Savolingizni yozing...", send: "Yuborish", none: "Bu savolga tayyor javobim yo'q. Operatorimiz yordam beradi:" },
+    ru: { ph: "Напишите ваш вопрос...", send: "Отправить", none: "На этот вопрос у меня нет готового ответа. Вам поможет оператор:" },
+    en: { ph: "Type your question...", send: "Send", none: "I don't have a ready answer to that. Our operator will help:" },
+  };
+
   const init = () => {
     const t = T[document.documentElement.lang] || T.uz;
+    const ask = ASK[document.documentElement.lang] || ASK.uz;
+    t.nodes.none = { text: ask.none, call: ["marg", "bulut", "paper", "office"], tg: true };
     const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
     const cross = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>';
 
@@ -89,7 +121,9 @@
       `<section class="bot__panel" id="bot-panel" role="dialog" aria-label="${t.title}" hidden>` +
       `<header class="bot__head"><img src="${document.querySelector(".logo__mark") ? document.querySelector(".logo__mark").getAttribute("src") : ""}" alt="" width="739" height="947"><div><strong>${t.title}</strong><span>${t.status}</span></div>` +
       `<button type="button" class="bot__close" aria-label="${t.close}">${cross}</button></header>` +
-      `<div class="bot__log" aria-live="polite"></div><div class="bot__opts"></div></section>`;
+      `<div class="bot__log" aria-live="polite"></div><div class="bot__opts"></div>` +
+      `<form class="bot__ask"><input type="text" maxlength="200" placeholder="${ask.ph}" aria-label="${ask.ph}">` +
+      `<button type="submit" aria-label="${ask.send}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button></form></section>`;
     document.body.appendChild(wrap);
 
     const fab = wrap.querySelector(".bot__fab");
@@ -133,6 +167,21 @@
         opts.appendChild(b);
       });
     };
+
+    const askForm = wrap.querySelector(".bot__ask");
+    const askInput = askForm.querySelector("input");
+    askForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const q = askInput.value.trim();
+      if (!q) return;
+      const m = document.createElement("div");
+      m.className = "bot__msg bot__msg--user";
+      m.textContent = q;
+      log.appendChild(m);
+      askInput.value = "";
+      const hello = /salom|assalom|привет|здравств|добрый|hello|\bhi\b|good (morning|day)/i.test(q);
+      show(findNode(q) || (hello ? "root" : "none"));
+    });
 
     let started = false;
     const toggle = (open) => {
