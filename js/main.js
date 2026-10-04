@@ -227,6 +227,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Hero: kartalardagi mahsulot rasmlari navbatma-navbat almashadi
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("[data-slides]").forEach((wrap, n) => {
+      const slides = wrap.querySelectorAll(".slide");
+      if (slides.length < 2) return;
+      let i = 0;
+      setTimeout(() => setInterval(() => {
+        slides[i].classList.remove("is-active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("is-active");
+      }, 3200), n * 1600);
+    });
+  }
+
   // Xomashyo: narx so'rovi formasi
   document.querySelectorAll('input[type="range"][data-output]').forEach((range) => {
     const out = document.getElementById(range.dataset.output);
