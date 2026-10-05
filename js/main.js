@@ -291,6 +291,68 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Aloqa sahifasi: kompyuterda telefon va email bosilsa nusxalanadi (telefonda — qo'ng'iroq/pochta)
+  if (document.querySelector("#contact-form") && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    const copyTexts = {
+      uz: { done: "Nusxa olindi", hint: "Nusxalash uchun bosing" },
+      ru: { done: "Скопировано", hint: "Нажмите, чтобы скопировать" },
+      en: { done: "Copied", hint: "Click to copy" },
+    };
+    const ct = copyTexts[root.lang] || copyTexts.uz;
+    const toast = document.createElement("div");
+    toast.className = "copy-toast";
+    toast.setAttribute("role", "status");
+    document.body.appendChild(toast);
+    let hideTimer;
+    const copyText = async (text) => {
+      try { await navigator.clipboard.writeText(text); return true; } catch (e) {
+        const ta = document.createElement("textarea");
+        ta.value = text; ta.style.cssText = "position:fixed;opacity:0";
+        document.body.appendChild(ta); ta.select();
+        const ok = document.execCommand("copy"); ta.remove(); return ok;
+      }
+    };
+    document.querySelectorAll('main a[href^="tel:"], main a[href^="mailto:"]').forEach((link) => {
+      link.classList.add("is-copyable");
+      link.title = ct.hint;
+      link.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const value = link.textContent.trim();
+        if (!(await copyText(value))) return;
+        toast.textContent = `${ct.done}: ${value}`;
+        toast.classList.add("is-visible");
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => toast.classList.remove("is-visible"), 1800);
+      });
+    });
+  }
+
+  // Valmond: 3D korobka — o'zi sekin aylanadi, sichqoncha/barmoq bilan buriladi
+  const stage = document.querySelector(".vbox3d");
+  if (stage) {
+    const box3d = stage.querySelector(".vbox3d__box");
+    let rx = 62, rz = -24, drag = null, idle = 0, visible = true;
+    const spin = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const set3d = () => { box3d.style.setProperty("--rx", rx + "deg"); box3d.style.setProperty("--rz", rz + "deg"); };
+    const tick = () => {
+      if (spin && visible && !drag && performance.now() > idle) { rz += 0.18; set3d(); }
+      requestAnimationFrame(tick);
+    };
+    stage.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, y: e.clientY, rx, rz, mouse: e.pointerType === "mouse" }; stage.setPointerCapture(e.pointerId); });
+    stage.addEventListener("pointermove", (e) => {
+      if (!drag) return;
+      rz = drag.rz + (e.clientX - drag.x) * 0.4;
+      if (drag.mouse) rx = Math.max(-80, Math.min(85, drag.rx - (e.clientY - drag.y) * 0.4));
+      set3d();
+    });
+    const stop = () => { drag = null; idle = performance.now() + 2500; };
+    stage.addEventListener("pointerup", stop);
+    stage.addEventListener("pointercancel", stop);
+    if ("IntersectionObserver" in window) new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(stage);
+    set3d();
+    requestAnimationFrame(tick);
+  }
+
   // Xomashyo: narx so'rovi formasi
   document.querySelectorAll('input[type="range"][data-output]').forEach((range) => {
     const out = document.getElementById(range.dataset.output);

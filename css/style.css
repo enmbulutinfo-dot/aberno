@@ -792,6 +792,20 @@ body.no-scroll { overflow: hidden; }
 .vpack-eq__box { width: var(--box-w); }
 .vpack-eq__pack { width: calc(var(--box-w) * 160 / 580); }
 .vpack-eq__sign { align-self: center; }
+/* Valmond: aylanadigan 3D korobka (tomonlar haqiqiy suratlardan) */
+.vbox3d { --L: min(440px, 78vw); --W: calc(var(--L) * .441); --T: calc(var(--L) * .126);
+  position: relative; margin: 0; height: calc(var(--L) * .78); display: grid; place-items: center; perspective: 1500px; cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.vbox3d:active { cursor: grabbing; }
+.vbox3d::before { content: ""; position: absolute; left: 50%; top: 58%; width: calc(var(--L) * 1.05); height: calc(var(--W) * .7); transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(60, 40, 10, .26), transparent); filter: blur(10px); pointer-events: none; }
+.vbox3d__box { position: relative; width: var(--L); height: var(--W); transform-style: preserve-3d; transform: rotateX(var(--rx, 62deg)) rotateZ(var(--rz, -24deg)); }
+.vbox3d__face { position: absolute; background-size: 100% 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.vbox3d__top    { left: 0; top: 0; width: var(--L); height: var(--W); background-image: url(../images/valmond/3d/top.jpg); transform: translateZ(calc(var(--T) / 2)); }
+.vbox3d__bottom { left: 0; top: 0; width: var(--L); height: var(--W); background-image: url(../images/valmond/3d/bottom.jpg); transform: rotateY(180deg) translateZ(calc(var(--T) / 2)); filter: brightness(.86); }
+.vbox3d__front  { left: 0; top: calc((var(--W) - var(--T)) / 2); width: var(--L); height: var(--T); background-image: url(../images/valmond/3d/front.jpg); transform: rotateX(-90deg) translateZ(calc(var(--W) / 2)); filter: brightness(.94); }
+.vbox3d__back   { left: 0; top: calc((var(--W) - var(--T)) / 2); width: var(--L); height: var(--T); background-image: url(../images/valmond/3d/back.jpg); transform: rotateX(90deg) translateZ(calc(var(--W) / 2)) rotateZ(180deg); filter: brightness(.9); }
+.vbox3d__right  { left: calc((var(--L) - var(--T)) / 2); top: 0; width: var(--T); height: var(--W); background-image: url(../images/valmond/3d/end-r.jpg); transform: rotateY(90deg) translateZ(calc(var(--L) / 2)); filter: brightness(.88); }
+.vbox3d__left   { left: calc((var(--L) - var(--T)) / 2); top: 0; width: var(--T); height: var(--W); background-image: url(../images/valmond/3d/end-r.jpg); transform: rotateY(-90deg) translateZ(calc(var(--L) / 2)); filter: brightness(.84); }
+.vbox3d figcaption { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: .8rem; color: var(--zone-muted, var(--muted)); }
 /* Valmond: haqiqiy suratlar */
 .vphoto { margin: 0; }
 .vphoto img { display: block; width: 100%; height: auto; border-radius: 22px; background: #fff; box-shadow: 0 18px 44px rgba(5, 12, 30, .12); }
@@ -833,6 +847,9 @@ body.no-scroll { overflow: hidden; }
 .legal li { margin-bottom: 8px; }
 .legal__meta { color: var(--muted); font-size: .9rem; }
 .consent { font-size: .8rem; color: var(--muted); margin: 12px 0 0; }
+.is-copyable { cursor: copy; }
+.copy-toast { position: fixed; left: 50%; bottom: 28px; z-index: 120; padding: 11px 20px; border-radius: 999px; background: var(--navy-deep); color: #fff; font-weight: 600; font-size: .9rem; box-shadow: 0 14px 34px rgba(5, 12, 30, .3); opacity: 0; transform: translate(-50%, 16px); transition: opacity .25s, transform .25s; pointer-events: none; }
+.copy-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
 .form__send-error { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; font-size: .88rem; font-weight: 600; color: #b3261e; background: rgba(179, 38, 30, .08); border: 1px solid rgba(179, 38, 30, .25); }
 .consent a { color: var(--gold); text-decoration: underline; }
 
