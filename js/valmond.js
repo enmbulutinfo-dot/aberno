@@ -210,59 +210,14 @@ async function init3d(stage) {
   }
   const settle = () => { holding = false; target = t > 0.3 ? 1 : 0; resumeSpin(); };
 
-  if (isBox) {
-    // 1) Pastdagi tortqich (input range — klaviatura bilan ham ishlaydi)
-    if (pull) {
-      pull.addEventListener("input", () => {
-        holding = true; pauseSpin(); stage.classList.add("was-pulled");
-        t = target = pull.value / 1000;
-        applyOpen();
-      });
-      pull.addEventListener("change", settle);
-    }
-
-    // 2) Korobkaning o'zini ushlab tortish: tortma o'qi bo'ylab
-    const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
-    const toScreen = (v) => {
-      const p = v.clone().project(camera);
-      const r = renderer.domElement.getBoundingClientRect();
-      return new THREE.Vector2((p.x + 1) / 2 * r.width, (1 - p.y) / 2 * r.height);
-    };
-    let drag = null;
-    host.addEventListener("pointerdown", (e) => {
-      const r = renderer.domElement.getBoundingClientRect();
-      ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
-      ray.setFromCamera(ptr, camera);
-      if (!ray.intersectObject(model, true).length) return; // bo'sh joy — aylantirish
-      controls.enabled = false; // bu bosish aylantirmaydi, tortadi
-      pauseSpin();
-      const a = toScreen(new THREE.Vector3(controls.target.x, 0, 0));
-      const b = toScreen(new THREE.Vector3(controls.target.x + slide, 0, 0));
-      const axis = b.sub(a);
-      drag = { x: e.clientX, y: e.clientY, t0: t, axis, len2: Math.max(axis.lengthSq(), 1), id: e.pointerId };
-      try { host.setPointerCapture(e.pointerId); } catch {}
-      host.classList.add("is-pulling");
-    }, { capture: true });
-    host.addEventListener("pointermove", (e) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-      const along = (dx * drag.axis.x + dy * drag.axis.y) / drag.len2; // tortma yo'liga nisbatan ulush
-      holding = true;
-      stage.classList.add("was-pulled");
-      t = target = Math.min(1, Math.max(0, drag.t0 + along * DRAWER_END));
+  // Faqat pastdagi tortqich ochadi (input range — klaviatura bilan ham ishlaydi); korobkani surish — aylantiradi
+  if (isBox && pull) {
+    pull.addEventListener("input", () => {
+      holding = true; pauseSpin(); stage.classList.add("was-pulled");
+      t = target = pull.value / 1000;
       applyOpen();
     });
-    const end = (e) => {
-      if (!drag || e.pointerId !== drag.id) return;
-      const moved = Math.hypot(e.clientX - drag.x, e.clientY - drag.y) > 6;
-      drag = null;
-      controls.enabled = true;
-      host.classList.remove("is-pulling");
-      if (!moved) { holding = false; target = t > 0.3 ? 0 : 1; resumeSpin(); } // oddiy bosish — ochadi/yopadi
-      else settle();
-    };
-    host.addEventListener("pointerup", end);
-    host.addEventListener("pointercancel", end);
+    pull.addEventListener("change", settle);
   }
 
   // Faqat ko'rinib turganda chizish
