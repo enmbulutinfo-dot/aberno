@@ -4,252 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Valmond — премиальное сливочное масло | Aberno Group</title>
-  <meta name="description" content="Valmond — премиальное сливочное масло для тех, кто любит себя: натуральное, несолёное, жирность 82,5%, в составе только сливки. В коробке 800 г — 4 пачки по 200 г. Скоро.">
-  <meta name="theme-color" content="#0b1a2e" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#faf7f1" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Valmond — премиальное сливочное масло только из сливок: натуральное, несолёное, жирность 82,5%. В коробке 4 пачки по 200 г. Доставка по Ташкенту.">
+  <meta name="theme-color" content="#f5efe2">
   <link rel="icon" type="image/png" href="../images/brand/aberno-ne.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t;}catch(e){}</script>
-  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Noto+Serif+Display:wght@300;400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/valmond.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
 </head>
-<body>
+<body class="vm">
 
-  <header class="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="Aberno Group — Главная"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
-      <nav class="nav" aria-label="Основное меню">
-        <div class="nav__item">
-          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">О нас<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
-          <div class="nav__sub">
-            <a href="about.html">Компания</a>
-            <a href="sertifikatlar.html">Сертификаты</a>
-            <a href="karyera.html">Карьера</a>
-          </div>
-        </div>
-        <div class="nav__item">
-          <button type="button" class="nav__link nav__toggle" aria-expanded="false" aria-haspopup="true">Продукция<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
-          <div class="nav__sub nav__sub--brands">
-            <a class="nav__brand" href="bulut.html"><img src="../images/bulut-logo.png" alt=""><span>BULUT<small>Гигиеническая продукция</small></span></a>
-            <a class="nav__brand" href="pandoozy.html"><img src="../images/brand/pandoozy-logo.png" alt=""><span>PanDoozy<small>Салфетки и туалетная бумага</small></span></a>
-            <a class="nav__brand" href="margarin.html#smaylo"><img src="../images/brand/smaylo-logo.png" alt=""><span>Smaylo<small>Спреды</small></span></a>
-            <a class="nav__brand" href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt=""><span>Margaritto<small>Маргарины</small></span></a>
-            <a class="nav__brand" href="valmond.html"><b class="valmond-word">Valmond</b><span>Valmond<small>Премиальное сливочное масло</small></span></a>
-          </div>
-        </div>
-        <a href="xomashyo.html" class="nav__link">Сырьё</a>
-        <a href="export.html" class="nav__link">Экспорт</a>
-        <a href="contact.html" class="btn btn--primary">Связаться</a>
-      </nav>
-      <details class="lang">
-        <summary aria-label="Язык: Русский">RU</summary>
-        <div class="lang__menu">
-          <a href="../valmond.html" lang="uz" hreflang="uz">O'zbekcha</a>
-          <a href="valmond.html" lang="ru" hreflang="ru" aria-current="true">Русский</a>
-          <a href="../en/valmond.html" lang="en" hreflang="en">English</a>
-        </div>
-      </details>
-      <button class="theme-toggle" type="button" aria-label="Включить тёмную тему">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+  <header class="vm-head" data-head>
+    <div class="vm-wrap vm-head__in">
+      <a class="vm-back" href="index.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aberno Group</span></a>
+      <a class="vm-head__logo" href="#top" aria-label="Valmond"><img src="../images/valmond/valmond-logo.svg" alt="Valmond" width="295" height="35"></a>
+      <div class="vm-head__right">
+        <nav class="vm-lang" aria-label="Язык"><a href="../valmond.html" lang="uz" hreflang="uz">UZ</a><a href="valmond.html" lang="ru" hreflang="ru" aria-current="true">RU</a><a href="../en/valmond.html" lang="en" hreflang="en">EN</a></nav>
+        <a class="vm-btn vm-btn--sm" href="tel:+998953427070">Заказать</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero page-hero--split theme-zone">
-      <div class="aurora" aria-hidden="true"><span></span></div>
-      <div class="lines" aria-hidden="true"></div>
-      <div class="grain" aria-hidden="true"></div>
-      <div class="container">
-        <div>
-          <div class="breadcrumb"><a href="index.html">Главная</a> / Valmond</div>
-          <span class="soon">Скоро</span>
-          <h1><span class="valmond-word valmond-word-xl">Valmond</span></h1>
-          <p class="page-hero__sub">Gourmet butter · <span class="gold-text">82,5%</span></p>
-          <p>Премиальное сливочное масло для тех, кто любит себя. Натуральное, несолёное, жирность 82,5%. Производится на заводе Aberno Butters и скоро поступит в продажу.</p>
-          <div class="page-hero__actions">
-            <a href="contact.html" class="btn btn--primary">Связаться</a>
-            <a href="#qadoq" class="btn btn--ghost-light">Об упаковке</a>
+  <main id="top">
+    <section class="vm-hero">
+      <div class="vm-hero__glow" aria-hidden="true"></div>
+      <div class="vm-wrap vm-hero__grid">
+        <div class="vm-hero__text">
+          <p class="vm-eyebrow">Gourmet butter · 82,5%</p>
+          <h1 class="vm-hero__title">Роскошь в чистейшем виде</h1>
+          <p class="vm-hero__lead">Натуральное несолёное сливочное масло — только из сливок. Для тех, кто любит себя.</p>
+          <div class="vm-hero__cta">
+            <a class="vm-btn" href="tel:+998953427070">Заказать</a>
+            <a class="vm-link" href="#ichida">Подробнее</a>
           </div>
         </div>
-        <figure class="page-hero__art vbox3d" role="img" aria-label="Коробка Valmond, 3D">
-          <div class="vbox3d__box"><div class="vbox3d__face vbox3d__bottom"></div><div class="vbox3d__face vbox3d__back"></div><div class="vbox3d__face vbox3d__left"></div><div class="vbox3d__face vbox3d__right"></div><div class="vbox3d__face vbox3d__front"></div><div class="vbox3d__face vbox3d__top"></div></div>
-          <figcaption>Покрутите коробку</figcaption>
-        </figure>
+        <div class="vm-stage" data-stage="box" data-model="../images/valmond/model/Valmond-800g.glb">
+          <div class="vm-stage__arch" aria-hidden="true"></div>
+          <img class="vm-stage__poster" src="../images/valmond/studio/valmond-box-3d.png" width="1840" height="1040" alt="Коробка Valmond — 4 × 200 г премиального сливочного масла" fetchpriority="high">
+          <div class="vm-stage__canvas" data-canvas role="img" aria-label="3D-модель коробки Valmond: потяните, чтобы открыть, или вращайте."></div>
+          <p class="vm-stage__note" aria-live="polite">Открыли одну — остальные ждут</p>
+          <div class="vm-stage__bar">
+            <label class="vm-pull"><span class="vm-pull__label" data-pull-label data-open="Потяните, чтобы открыть" data-close="Сдвиньте, чтобы закрыть">Потяните, чтобы открыть</span><input type="range" min="0" max="1000" value="0" step="1" data-pull aria-label="Потяните, чтобы открыть"></label>
+            <span class="vm-stage__hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Рассмотрите со всех сторон</span>
+          </div>
+        </div>
+      </div>
+      <a class="vm-scroll" href="#facts" aria-label="Подробнее"><span></span></a>
+    </section>
+
+    <section class="vm-facts" id="facts">
+      <div class="vm-wrap vm-facts__row">
+        <div class="vm-fact reveal"><b>82,5<small>%</small></b><span>жирность</span></div>
+        <div class="vm-fact reveal"><b>Несолёное</b><span>natural unsalted</span></div>
+        <div class="vm-fact reveal"><b>100<small>%</small></b><span>только сливки</span></div>
+        <div class="vm-fact reveal"><b>4<small>×</small>200<small>g</small></b><span>в одной коробке · 800 г</span></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Продукт</span>
-          <h2>Основные характеристики</h2>
-        </div>
-        <div class="spec-grid">
-          <div class="spec reveal"><strong>82,5%</strong><span>жирность</span></div>
-          <div class="spec reveal reveal-delay-1"><strong>Несолёное</strong><span>натуральное масло (natural unsalted)</span></div>
-          <div class="spec reveal reveal-delay-2"><strong>100%</strong><span>только сливки</span></div>
-          <div class="spec reveal reveal-delay-3"><strong>120 суток</strong><span>срок хранения (при −16 °C)</span></div>
-        </div>
+    <section class="vm-quote">
+      <div class="vm-wrap">
+        <span class="vm-orn" aria-hidden="true">✦</span>
+        <p class="reveal">На тёплом хлебе, в нежной выпечке, в самых изысканных блюдах — почувствуйте разницу в каждой детали.</p>
       </div>
     </section>
 
-    <section class="vquote reveal">
-      <div class="container">
-        <p class="vquote__main">Роскошь в чистейшем виде.</p>
-        <p class="vquote__sub">На тёплом хлебе, в нежной выпечке, в самых изысканных блюдах. Почувствуйте разницу в каждой детали.</p>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="qadoq">
-      <div class="container">
-        <div class="section__head section__head--center reveal">
-          <span class="eyebrow">Упаковка</span>
-          <h2>Одна коробка — четыре пачки изобилия</h2>
-          <p class="lead">В каждой коробке Valmond — четыре пачки по 200 г. Открываете одну, остальные ждут своей очереди — на вашем столе всегда достаток.</p>
-        </div>
-        <div class="vpack-eq reveal">
-          <figure class="vpack-eq__box vphoto">
-            <img src="../images/valmond/valmond-box-top-sm.jpg" srcset="../images/valmond/valmond-box-top-sm.jpg 800w, ../images/valmond/valmond-box-top.jpg 1600w" sizes="(max-width: 700px) 82vw, 460px" alt="Коробка Valmond, 800 г" width="1600" height="712" loading="lazy">
-            <figcaption><strong>800 г</strong></figcaption>
-          </figure>
-          <span class="vpack-eq__sign" aria-hidden="true">= 4 ×</span>
-          <figure class="vpack-eq__pack vphoto">
-            <img src="../images/valmond/valmond-pack-sm.jpg" srcset="../images/valmond/valmond-pack-sm.jpg 800w, ../images/valmond/valmond-pack.jpg 1160w" sizes="(max-width: 700px) 50vw, 230px" alt="Пачка Valmond, 200 г" width="1160" height="660" loading="lazy">
-            <figcaption><strong>200 г</strong></figcaption>
-          </figure>
+    <section class="vm-pack">
+      <div class="vm-wrap vm-pack__grid">
+        <figure class="vm-packph reveal">
+          <div class="vm-stage__arch" aria-hidden="true"></div>
+          <img src="../images/valmond/studio/valmond-pack-200.png" width="1536" height="1024" alt="Пачка Valmond 200 г, перевязанная бечёвкой, с крафтовой биркой" loading="lazy">
+        </figure>        <div class="vm-pack__text reveal">
+          <p class="vm-eyebrow">200 g</p>
+          <h2>В ваших руках — 200 г роскоши</h2>
+          <p>Разверните обёртку — и сразу почувствуете нежность и чистый вкус масла, сделанного только из сливок.</p>
         </div>
       </div>
     </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section__head reveal">
-          <span class="eyebrow">Состав и хранение</span>
-          <h2>Только сливки — и ничего больше</h2>
-          <p class="lead">Масло сливочное традиционное сладко-сливочное несолёное.</p>
+    <section class="vm-label" id="ichida">
+      <div class="vm-wrap">
+        <div class="vm-label__head reveal">
+          <p class="vm-eyebrow vm-eyebrow--light">Состав и хранение</p>
+          <h2>Только сливки — и ничего больше</h2>
+          <p class="vm-label__sub">Масло сливочное традиционное сладко-сливочное несолёное</p>
         </div>
-        <div class="grid-3 vfacts">
-          <div class="card reveal">
+        <div class="vm-label__grid">
+          <div class="vm-card reveal">
             <h3>Состав</h3>
-            <p>Пастеризованные сливки из коровьего молока.</p>
-            <p class="vfacts__note">Массовая доля жира — 82,5%. Сделано в Узбекистане, продукция сертифицирована.</p>
+            <p class="vm-card__big">Пастеризованные сливки из коровьего молока</p>
+            <p class="vm-card__note">Массовая доля жира — 82,5%. Сделано в Узбекистане, продукция сертифицирована.</p>
           </div>
-          <div class="card reveal reveal-delay-1">
-            <h3>Пищевая ценность на 100 г</h3>
-            <dl class="vfacts__list">
-              <div><dt>Энергетическая ценность</dt><dd>748 ккал / 3132 кДж</dd></div>
+          <div class="vm-card reveal">
+            <h3>Пищевая ценность на 100 г</h3>
+            <dl class="vm-dl">
+              <div><dt>Энергетическая ценность</dt><dd>748 ккал <small>/ 3132 кДж</small></dd></div>
               <div><dt>Жиры</dt><dd>82,5 г</dd></div>
               <div><dt>Углеводы</dt><dd>0,8 г</dd></div>
               <div><dt>Белки</dt><dd>0,6 г</dd></div>
             </dl>
           </div>
-          <div class="card reveal reveal-delay-2">
+          <div class="vm-card reveal">
             <h3>Срок годности</h3>
-            <dl class="vfacts__list">
+            <dl class="vm-dl">
               <div><dt>+3 ±2 °C</dt><dd>35 суток</dd></div>
               <div><dt>−6 ±3 °C</dt><dd>60 суток</dd></div>
               <div><dt>−16 ±2 °C</dt><dd>120 суток</dd></div>
             </dl>
-            <p class="vfacts__note">Относительная влажность воздуха не более 90%. Срок годности исчисляется с даты изготовления.</p>
+            <p class="vm-card__note">Относительная влажность воздуха не более 90%. Срок годности исчисляется с даты изготовления.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--soft">
-      <div class="container legal" style="max-width:820px">
-        <span class="eyebrow">Для кого</span>
-        <h2>Для тех, кто любит себя</h2>
-        <p class="lead">Valmond — премиальное сливочное масло для домашнего стола. Оно создано для тех, кто ждёт от каждого завтрака самого лучшего.</p>
-        <p>Valmond производит Aberno Butters на собственном заводе по стандартам ISO 22000 и HACCP.</p>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:20px">
-      <div class="container">
-        <div class="cta theme-zone reveal">
-          <div class="aurora" aria-hidden="true"><span></span></div>
-          <div class="grain" aria-hidden="true"></div>
-          <div>
-            <h2>Узнайте первыми</h2>
-            <p>Свяжитесь с нами, чтобы узнать о старте продаж Valmond.</p>
-            <p class="cta__contacts">Маргарин: <a href="tel:+998953427070">+998 95 342-70-70</a> · Офис: <a href="tel:+998712300900">+998 71 230-09-00</a></p>
-          </div>
-          <div class="cta__actions"><a href="contact.html" class="btn btn--primary">Связаться</a></div>
+    <section class="vm-order">
+      <div class="vm-wrap vm-order__grid">
+        <figure class="vm-order__img reveal"><img src="../images/valmond/studio/valmond-box-front.png" width="1536" height="1024" alt="Коробка Valmond — 4 × 200 г премиального сливочного масла" loading="lazy"></figure>
+        <div class="vm-order__text reveal">
+          <p class="vm-eyebrow">Заказ</p>
+          <h2>Доставим к вашему столу</h2>
+          <ul class="vm-order__list">
+            <li><span class="vm-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.1M17 19a2 2 0 1 0 0-.1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><div><b>Доставка по Ташкенту</b><span>Привезём ваш заказ до двери в любой район Ташкента.</span></div></li>
+            <li><span class="vm-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h16v12H4zM2.5 5h19v3h-19zM12 5v15M12 5c-2-3-6-2.5-5 0M12 5c2-3 6-2.5 5 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><div><b>Заказ — от 5 коробок</b><span>Это 20 пачек чистого сливочного масла: хватит и для семьи, и чтобы поделиться с близкими.</span></div></li>
+          </ul>
+          <a class="vm-phone" href="tel:+998953427070"><small>Позвоните, чтобы заказать</small>+998 95 342-70-70</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer dark-zone">
-    <div class="aurora" aria-hidden="true"><span></span></div>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <a href="index.html" class="logo" aria-label="Aberno Group"><img class="logo__mark" src="../images/brand/aberno-ne.png" alt="" width="739" height="947"><span class="logo__text"><b>ABERNO</b><small>GROUP</small></span></a>
-          <p>С 2021 года производим санитарно-гигиеническую продукцию, бумагу-основу, маргарин и спреды.</p>
-          <div class="socials">
-            <a class="social" href="https://t.me/aberno_uz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1.1-1 .2-1.5L20.6 2.7c.9-.3 1.6.2 1.3 1.6z"/></svg> aberno_uz</a>
-            <a class="social" href="https://www.instagram.com/aberno.uz/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> aberno.uz</a>
-          </div>
-        </div>
-        <div>
-          <h4>Компания</h4>
-          <ul>
-            <li><a href="about.html">О компании</a></li>
-            <li><a href="sertifikatlar.html">Сертификаты</a></li>
-            <li><a href="export.html">Экспорт</a></li>
-            <li><a href="karyera.html">Карьера</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Бренды</h4>
-          <ul>
-            <li><a href="bulut.html">BULUT</a></li>
-            <li><a href="xomashyo.html">Сырьё BULUT</a></li>
-            <li><a href="pandoozy.html">PanDoozy</a></li>
-            <li><a href="margarin.html#margaritto">MARGARITTO</a></li>
-            <li><a href="margarin.html#smaylo">SMAYLO</a></li>
-            <li><a href="valmond.html">VALMOND</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Контакты</h4>
-          <ul>
-            <li class="footer__tel-group">Офис</li>
-            <li>Маргарин: <a href="tel:+998953427070">+998 95 342-70-70</a></li>
-            <li>BULUT: <a href="tel:+998953247070">+998 95 324-70-70</a></li>
-            <li>Общий: <a href="tel:+998712300900">+998 71 230-09-00</a></li>
-            <li class="footer__tel-group">Экспорт</li>
-            <li>Маргарин: <a href="tel:+998974009198">+998 97 400-91-98</a></li>
-            <li>Сырьё и BULUT: <a href="tel:+998771818585">+998 77 181-85-85</a></li>
-            <li><a href="mailto:info@aberno.uz">info@aberno.uz</a></li>
-            <li>BULUT: <a href="mailto:bulut_info@mail.ru">bulut_info@mail.ru</a></li>
-            <li>г. Ташкент, Яшнабадский район, ул. Уйсозлар, 72</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__brands">
-        <a href="bulut.html"><img class="emblem--white" src="../images/bulut-logo.png" alt="BULUT" width="848" height="615"></a>
-        <a href="margarin.html#margaritto"><img src="../images/brand/margaritto-logo.png" alt="Margaritto" width="1384" height="805"></a>
-        <a href="margarin.html#smaylo"><img class="emblem--white" src="../images/brand/smaylo-logo.png" alt="Smaylo" width="1493" height="508"></a>
-        <a href="pandoozy.html"><img class="emblem--white" src="../images/brand/pandoozy-logo.png" alt="PanDoozy" width="1352" height="399"></a>
-        <a href="valmond.html" class="footer__valmond">Valmond</a>
-      </div>
-      <div class="footer__bottom">
-        <span>© <span data-year>2026</span> Aberno Group. Все права защищены.</span>
+  <footer class="vm-foot">
+    <div class="vm-wrap vm-foot__in">
+      <img class="vm-foot__logo" src="../images/valmond/valmond-logo.svg" alt="Valmond" width="295" height="35">
+      <p class="vm-foot__slogan">Роскошь в чистейшем виде</p>
+      <p class="vm-foot__maker">Изготовитель: ООО «ABERNO BUTTERS GROUP» · г. Ташкент, Яшнабадский район, ул. Уйсозлар, 72</p>
+      <div class="vm-foot__links">
+        <a href="index.html">Aberno Group</a>
+        <a href="contact.html">Контакты</a>
         <a href="maxfiylik.html">Политика конфиденциальности</a>
       </div>
+      <p class="vm-foot__copy">© <span data-year>2026</span> Aberno Group</p>
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
-  <script src="../js/bot.js" defer></script>
+  <script type="module" src="../js/valmond.js"></script>
 </body>
 </html>
