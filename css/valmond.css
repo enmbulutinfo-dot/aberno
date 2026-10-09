@@ -78,7 +78,7 @@ a { color: inherit; }
 .vm-pull input::-moz-range-thumb { width: 54px; height: 26px; border-radius: 4px; border: 0; background: linear-gradient(135deg, var(--gold-hi), var(--gold) 50%, var(--gold-lo)); box-shadow: 0 6px 16px -6px rgba(141, 106, 43, .8); }
 .vm-stage.is-3d:not(.was-pulled) .vm-pull input::-webkit-slider-thumb { animation: vmNudge 2.6s var(--ease) infinite 1.5s; }
 @keyframes vmNudge { 0%, 60%, 100% { translate: 0 0; } 30% { translate: 14px 0; } }
-.vm-stage__canvas.is-pulling { cursor: ew-resize; }.vm-stage__hint { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--choc-2); opacity: .8; }
+.vm-stage__hint { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--choc-2); opacity: .8; }
 .vm-stage__hint svg { width: 16px; height: 16px; }
 .vm-scroll { position: absolute; left: 50%; bottom: 22px; translate: -50% 0; width: 1px; height: 46px; background: linear-gradient(var(--gold), transparent); }
 .vm-scroll span { position: absolute; left: -2px; top: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: vmDrop 2.2s var(--ease) infinite; }
