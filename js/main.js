@@ -291,8 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Aloqa sahifasi: kompyuterda telefon va email bosilsa nusxalanadi (telefonda — qo'ng'iroq/pochta)
-  if (document.querySelector("#contact-form") && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  // Kompyuterda telefon va email bosilsa nusxalanadi (telefonda — qo'ng'iroq/pochta):
+  // footer'da hamma sahifada, aloqa sahifasida esa asosiy blokda ham
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    const copyScope = document.querySelector("#contact-form") ? "main, footer" : "footer";
     const copyTexts = {
       uz: { done: "Nusxa olindi", hint: "Nusxalash uchun bosing" },
       ru: { done: "Скопировано", hint: "Нажмите, чтобы скопировать" },
@@ -312,7 +314,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const ok = document.execCommand("copy"); ta.remove(); return ok;
       }
     };
-    document.querySelectorAll('main a[href^="tel:"], main a[href^="mailto:"]').forEach((link) => {
+    const copySel = copyScope.split(", ").map((s) => `${s} a[href^="tel:"], ${s} a[href^="mailto:"]`).join(", ");
+    document.querySelectorAll(copySel).forEach((link) => {
       link.classList.add("is-copyable");
       link.title = ct.hint;
       link.addEventListener("click", async (e) => {
